@@ -3,39 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Meta Tags — optimize for how real people search for this -->
-  <title>Music Royalty Audit Service | Find Your Missing Royalties | YOUR_SERVICE_NAME</title>
-  <meta name="description" content="A royalty audit service for music producers, artists, and managers. We run a diagnostic across 15+ documented failure modes — SoundExchange duplicates, IPI gaps, label rate errors, Content ID diversion — and deliver a dispute-ready report within 48 hours." />
-  <meta name="keywords" content="music royalty audit, missing royalties music producer, SoundExchange duplicate account, royalty underpayment, music producer not getting paid, MLC registration, IPI number royalties, label royalty dispute" />
-  
-  <!-- Open Graph for LinkedIn sharing -->
-  <meta property="og:title" content="YOUR_SERVICE_NAME | Music Royalty Audit Service" />
-  <meta property="og:description" content="Virtually every audit finds underpayment. The question is whether yours is one of them." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR_DOMAIN" />
 
-  <!-- Fonts: DM Serif Display for headlines, DM Sans for body — authoritative but not corporate -->
+  <!--
+    SEO TITLE — Updated v2
+    Targets: royalty audit, distributor withholding, ACRCloud dispute, PRO gaps
+    Vocabulary pulled from real Reddit research on how professionals describe these problems
+    Keep under 60 characters for the core phrase, allow modifier after pipe
+  -->
+  <title>Music Royalty Audit | Distributor Withholding, ACRCloud Disputes & PRO Gaps | Nome House Audits</title>
+
+  <!--
+    META DESCRIPTION — Updated v2
+    Google rewrites descriptions 60-70% of the time.
+    We write this for the 30-40% where it matters — high-impression branded queries.
+    Lead with the pain, end with the action.
+    Real case number ($1,000+) adds EEAT signal to the snippet itself.
+  -->
+  <meta name="description" content="We audited one artist's catalog and found $1,000+ in unaccounted royalties in a single session — frozen by a distributor payment flag and distrubutor errors, confirmed by cross-referencing Spotify data against distributor statements. We run the same audit for producers, artists, and managers and give you preventative measures to make sure your royalties stream correctly after the audit. Starts at $500." />
+
+  <!--
+    KEYWORDS — Extended v2
+    Include the vocabulary real professionals use when they discover these problems.
+    "Indiefy not paying", "distributor balance not released", "ACRCloud copyright flag"
+    are all searches that will lead someone directly here.
+  -->
+  <meta name="keywords" content="music royalty audit, distributor not paying royalties, ACRCloud copyright flag dispute, royalty underpayment music producer, SoundExchange duplicate account, IPI number royalties, MLC registration music, label royalty dispute, Indiefy not paying, music royalty withheld, distributor withholding royalties, streaming royalty audit, music producer not getting paid, PRO royalty gap" />
+
+  <!-- Open Graph for LinkedIn — where your warm leads live -->
+  <meta property="og:title" content="Nome House Audits | Music Royalty Audit — Find What Your Distributor Isn't Telling You" />
+  <meta property="og:description" content="We found $1,000+ in unaccounted royalties for one artist in a single 2 hour session. The money was there but the distributor wasn't reporting it. Now she is setup to seamlessly colelct royalties in the future direct deposit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nomehousestudios.org" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
 
-  <!-- Schema Markup: tells Google and AI models exactly what this service is -->
+  <!--
+    SCHEMA MARKUP — Expanded v2
+    Two schema blocks:
+    1. ProfessionalService — tells Google and LLMs what this business is
+    2. Service — tells LLMs what specific problems we solve (GEO optimization)
+    Note from SEO guide: schema doesn't transfer to LLM pre-training via common crawl,
+    but Google uses it for rich results and indexing. Both matter.
+  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "YOUR_SERVICE_NAME",
-    "description": "Music royalty audit service for producers, artists, and managers. Detects underpayments across streaming, PRO royalties, SoundExchange, and label contracts.",
-    "url": "https://YOUR_DOMAIN",
-    "email": "YOUR_EMAIL",
+    "name": "Nome House music industry royalty audits",
+    "description": "Music royalty audit service for independent artists, producers, and managers. We identify royalty underpayments across streaming distributors, PRO registration gaps, SoundExchange duplicate accounts, ACRCloud copyright flags, MLC mechanical royalty gaps, and label contract rate errors. We audit catalogs, cross-reference streaming data against distributor statements, and deliver dispute-ready documentation.",
+    "url": "https://www.nomehousestudios.org",
+    "email": "deshawn@nomehousestudios.org",
     "serviceType": "Music Royalty Audit",
-    "areaServed": "Worldwide"
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Royalty Audit Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Catalog Audit Report",
+            "description": "Full diagnostic audit of one artist catalog across 15+ documented royalty failure modes. Includes distributor payment verification, PRO registration gap check, SoundExchange account check, MLC registration status, and ACRCloud dispute identification. Delivered in 48-72 hours."
+          },
+          "price": "500",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Audit Plus Quarterly Watch",
+            "description": "Full catalog audit plus three months of quarterly re-scans for new discrepancies. Recommended for artists with active label deals or distributor relationships."
+          },
+          "price": "800",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Manager Roster Audit",
+            "description": "Full catalog audit for up to five artists on a management roster. Separate report and dispute letters per artist. Delivered within five business days."
+          },
+          "price": "1500",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!--
+    FAQ SCHEMA — GEO optimization
+    LLMs reference FAQ schema to answer questions about services.
+    Questions match the PAA (People Also Ask) vocabulary from real searches.
+    Each answer is a self-contained chunk that can be extracted and cited independently.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is my distributor showing earnings but never paying me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When a distributor shows a balance but Paid Earnings reads $0.00, there are three common causes: the distributor has received royalties from streaming platforms but is withholding them pending a copyright dispute flag, the distributor's relationship with their upstream aggregator has broken down and funds are stranded in the pipeline, or the withdrawal system has a technical failure. The fastest diagnostic is to attempt a withdrawal and document the result. If the withdrawal stays pending indefinitely, you have a documented withholding case. A royalty audit cross-references your Spotify for Artists stream counts against your distributor statement to quantify exactly what has and has not been accounted for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an ACRCloud copyright flag and can it block my royalty payments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ACRCloud is an audio fingerprinting service that distributors use to detect potential rights conflicts before or after music is uploaded. When ACRCloud flags a match between your recording and another registered audio fingerprint, many distributors automatically freeze royalty payments for that track pending resolution. The flag can be triggered by a legitimate rights conflict, a false positive caused by similar chord progressions or production elements, or a prior registration of the same audio by a producer or co-writer through a different service. A royalty audit identifies whether an ACRCloud flag is active on your releases, determines whether it is a legitimate dispute or a false positive, and prepares the documentation needed to submit a formal dispute to resolve the freeze and release held funds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should 90,000 Spotify streams pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At 2026 Spotify rates, 90,000 streams from a US-dominant listener base should generate approximately $270 to $400 in master recording royalties paid through the distributor. That same 90,000 streams also generates approximately $90 in performance royalties through ASCAP or BMI, and approximately $62 in mechanical royalties through The MLC, for a total of roughly $420 to $550 across all three royalty streams. If a distributor is showing significantly less than $270 for 90,000 US-heavy streams, that is a flag worth auditing. Common causes: an ACRCloud dispute freezing payments, geographic rate dilution from streams in lower-paying markets, Discovery Mode reducing the Spotify rate by 30%, or distributor withholding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is The MLC and do I need to register my songs with them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Mechanical Licensing Collective (The MLC the mechanical part comes from the olden days of mechanical playback systems for music) is the organization that collects mechanical royalties from US interactive streaming services including Spotify, Apple Music, Amazon Music, Tidal, and YouTube Music. Every US songwriter and composer whose music is available on these platforms is eligible to collect from The MLC. Registration is free and is separate from ASCAP or BMI membership. If your songs are not registered with The MLC, mechanical royalties from US streaming accumulate as unmatched funds. After three years, unmatched funds are redistributed to major publishers based on market share. A royalty audit checks MLC registration status and cross-references whether your songs appear in The MLC public work search as matched or unmatched."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a producer I worked with affect my royalty payments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, in several ways. If a producer registered the underlying beat or instrumental through their own distributor or a Content ID service before you released the final song, an audio fingerprint conflict can cause platforms to route your streaming revenue to the producer's registered claim rather than your distributor account. If the producer has a publishing deal through a different PRO than yours, the royalty splits at ASCAP or BMI may not match the splits registered at The MLC, creating a discrepancy between what different collection societies are distributing. A signed split sheet documents the agreed ownership percentages and is the primary evidence used to resolve these conflicts. A royalty audit identifies split discrepancies across PROs, checks for conflicting audio registrations, and prepares the documentation package needed to resolve payment freezes."
+        }
+      }
+    ]
   }
   </script>
 
   <style>
-    /* === RESET & BASE === */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -54,561 +170,132 @@
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { background: var(--black); color: var(--white); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--gold-light); }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* === NAV === */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(10,10,10,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      color: var(--white);
-      letter-spacing: 0.01em;
-    }
-
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--serif); font-size: 1.05rem; color: var(--white); letter-spacing: 0.01em; }
     .nav-logo span { color: var(--gold); }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--black);
-      padding: 10px 22px;
-      font-family: var(--sans);
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.03em;
-      transition: background 0.2s;
-    }
-
+    .nav-cta { background: var(--gold); color: var(--black); padding: 10px 22px; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.03em; transition: background 0.2s; }
     .nav-cta:hover { background: var(--gold-light); color: var(--black); }
 
-    /* === HERO === */
-    .hero {
-      padding: 160px 24px 100px;
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
-    }
-
-    .hero-headline {
-      font-family: var(--serif);
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
-      line-height: 1.12;
-      color: var(--white);
-      max-width: 820px;
-      margin-bottom: 28px;
-    }
-
-    .hero-headline em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .hero-sub {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 580px;
-      margin-bottom: 48px;
-      line-height: 1.75;
-    }
-
+    .hero { padding: 160px 24px 100px; max-width: var(--max); margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    .hero-headline { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.2rem); line-height: 1.12; color: var(--white); max-width: 820px; margin-bottom: 28px; }
+    .hero-headline em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 580px; margin-bottom: 48px; line-height: 1.75; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--black);
-      padding: 16px 36px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      display: inline-block;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .btn-primary:hover {
-      background: var(--gold-light);
-      color: var(--black);
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost {
-      border: 1px solid var(--border);
-      color: var(--muted);
-      padding: 16px 36px;
-      font-size: 0.95rem;
-      display: inline-block;
-      transition: border-color 0.2s, color 0.2s;
-    }
-
+    .btn-primary { background: var(--gold); color: var(--black); padding: 16px 36px; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; display: inline-block; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--gold-light); color: var(--black); transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid var(--border); color: var(--muted); padding: 16px 36px; font-size: 0.95rem; display: inline-block; transition: border-color 0.2s, color 0.2s; }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
-    /* === STATS STRIP === */
-    .stats-strip {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 48px 24px;
-      background: var(--deep);
-    }
-
-    .stats-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 48px;
-    }
-
+    .stats-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 24px; background: var(--deep); }
+    .stats-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; }
     .stat-item { text-align: center; }
+    .stat-number { font-family: var(--serif); font-size: 2.8rem; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; max-width: 200px; margin: 0 auto; }
+    .stat-item.featured .stat-number { color: var(--critical); }
 
-    .stat-number {
-      font-family: var(--serif);
-      font-size: 2.8rem;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      max-width: 200px;
-      margin: 0 auto;
-    }
-
-    /* === SECTION HEADERS === */
     .section { padding: 96px 24px; }
+    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.2; margin-bottom: 20px; max-width: 700px; }
+    .section-body { color: var(--muted); max-width: 620px; margin-bottom: 56px; line-height: 1.75; }
 
-    .section-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
+    /* LIVE CASE STUDY — Primary proof block */
+    .live-case { background: var(--surface); border: 1px solid var(--gold); padding: 0; max-width: 960px; overflow: hidden; }
+    .live-case-header { background: var(--gold); padding: 16px 40px; display: flex; align-items: center; gap: 12px; }
+    .live-case-header span { color: var(--black); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .live-case-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--black); opacity: 0.4; }
+    .live-case-body { padding: 48px 40px; }
+    .live-case-body h3 { font-family: var(--serif); font-size: 1.6rem; margin-bottom: 20px; }
+    .live-case-body p { color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+    .live-case-body p:last-of-type { margin-bottom: 32px; }
+    .findings-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .finding-item .finding-val { font-family: var(--serif); font-size: 1.8rem; color: var(--gold); }
+    .finding-item .finding-val.critical { color: var(--critical); }
+    .finding-item .finding-desc { font-size: 0.8rem; color: var(--muted); margin-top: 4px; line-height: 1.5; }
 
-    .section-title {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      line-height: 1.2;
-      margin-bottom: 20px;
-      max-width: 700px;
-    }
+    /* Finding tags */
+    .finding-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+    .ftag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; }
+    .ftag-critical { background: rgba(217,92,58,0.15); color: var(--critical); border: 1px solid rgba(217,92,58,0.3); }
+    .ftag-flag { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
 
-    .section-body {
-      color: var(--muted);
-      max-width: 620px;
-      margin-bottom: 56px;
-      line-height: 1.75;
-    }
+    /* Distributor withholding explainer — GEO chunk */
+    .chunk-block { background: var(--surface); border-left: 4px solid var(--gold); padding: 40px 48px; max-width: 860px; margin-bottom: 24px; }
+    .chunk-block h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 16px; }
+    .chunk-block p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+    .chunk-block p:last-child { margin-bottom: 0; }
+    .chunk-block .chunk-number { font-family: var(--serif); font-size: 2rem; color: var(--gold); margin-bottom: 8px; display: block; }
 
-    /* === CASE STUDY === */
-    .case-study {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--gold);
-      padding: 48px;
-      max-width: 860px;
-    }
-
-    .case-study-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .case-study blockquote {
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      line-height: 1.55;
-      color: var(--white);
-      margin-bottom: 24px;
-    }
-
-    .case-study .findings-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-    }
-
-    .finding-item .finding-val {
-      font-family: var(--serif);
-      font-size: 1.6rem;
-      color: var(--gold);
-    }
-
-    .finding-item .finding-desc {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    /* === FAILURE MODES === */
-    .modes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-
-    .mode-card {
-      background: var(--surface);
-      padding: 36px;
-      transition: background 0.2s;
-    }
-
+    .modes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .mode-card { background: var(--surface); padding: 36px; transition: background 0.2s; }
     .mode-card:hover { background: var(--deep); }
-
-    .mode-tag {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-
+    .mode-tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px; margin-bottom: 16px; display: inline-block; }
     .tag-critical { background: rgba(217,92,58,0.15); color: var(--critical); }
     .tag-flag { background: rgba(201,168,76,0.15); color: var(--gold); }
     .tag-watch { background: rgba(255,255,255,0.06); color: var(--muted); }
+    .mode-card h3 { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 12px; }
+    .mode-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+    .mode-card .mode-evidence { margin-top: 16px; font-size: 0.78rem; color: var(--gold); font-style: italic; }
 
-    .mode-card h3 {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      margin-bottom: 12px;
-    }
-
-    .mode-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .mode-card .mode-evidence {
-      margin-top: 16px;
-      font-size: 0.78rem;
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    /* === PRICING === */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      max-width: 960px;
-    }
-
-    .pricing-card {
-      background: var(--surface);
-      padding: 48px 40px;
-      position: relative;
-    }
-
-    .pricing-card.featured {
-      background: var(--deep);
-      border: 1px solid var(--gold);
-      margin: -1px;
-    }
-
-    .featured-badge {
-      position: absolute;
-      top: -12px;
-      left: 40px;
-      background: var(--gold);
-      color: var(--black);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-    }
-
-    .price-tier {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .price-amount {
-      font-family: var(--serif);
-      font-size: 3rem;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-
-    .price-period {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    .price-features {
-      list-style: none;
-      margin-bottom: 36px;
-    }
-
-    .price-features li {
-      font-size: 0.9rem;
-      color: var(--muted);
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .price-features li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-    }
-
-    .price-features li strong { color: var(--white); }
-
-    .pricing-note {
-      margin-top: 32px;
-      font-size: 0.82rem;
-      color: var(--muted);
-      font-style: italic;
-      max-width: 960px;
-    }
-
-    /* === HOW IT WORKS === */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 48px;
-      max-width: 900px;
-    }
-
-    .step { position: relative; }
-
-    .step-num {
-      font-family: var(--serif);
-      font-size: 3.5rem;
-      color: var(--border);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .step h3 {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .step p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* === REDDIT EVIDENCE PULL === */
-    .evidence-block {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 40px 48px;
-      max-width: 840px;
-      margin-bottom: 24px;
-    }
-
-    .evidence-quote {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-
-    .evidence-meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
+    .evidence-block { background: var(--surface); border: 1px solid var(--border); padding: 40px 48px; max-width: 840px; margin-bottom: 24px; }
+    .evidence-quote { font-family: var(--serif); font-size: 1.2rem; line-height: 1.6; color: var(--white); margin-bottom: 16px; }
+    .evidence-meta { font-size: 0.78rem; color: var(--muted); }
     .evidence-meta span { color: var(--gold); }
 
-    /* === FAQ === */
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      max-width: 780px;
-    }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: var(--border); border: 1px solid var(--border); max-width: 960px; }
+    .pricing-card { background: var(--surface); padding: 48px 40px; position: relative; }
+    .pricing-card.featured { background: var(--deep); border: 1px solid var(--gold); margin: -1px; }
+    .featured-badge { position: absolute; top: -12px; left: 40px; background: var(--gold); color: var(--black); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; }
+    .price-tier { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .price-amount { font-family: var(--serif); font-size: 3rem; color: var(--white); margin-bottom: 6px; }
+    .price-period { font-size: 0.82rem; color: var(--muted); margin-bottom: 28px; }
+    .price-features { list-style: none; margin-bottom: 36px; }
+    .price-features li { font-size: 0.9rem; color: var(--muted); padding: 10px 0; border-bottom: 1px solid var(--border); padding-left: 20px; position: relative; }
+    .price-features li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+    .price-features li strong { color: var(--white); }
+    .pricing-note { margin-top: 32px; font-size: 0.82rem; color: var(--muted); font-style: italic; max-width: 960px; }
 
-    .faq-q {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      padding: 28px 0;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-    }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 48px; max-width: 900px; }
+    .step-num { font-family: var(--serif); font-size: 3.5rem; color: var(--border); line-height: 1; margin-bottom: 16px; }
+    .step h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 12px; }
+    .step p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
-    .faq-q::after {
-      content: '+';
-      font-size: 1.4rem;
-      color: var(--gold);
-      flex-shrink: 0;
-      font-family: var(--sans);
-      font-weight: 300;
-    }
-
+    .faq-item { border-bottom: 1px solid var(--border); max-width: 780px; }
+    .faq-q { font-family: var(--serif); font-size: 1.1rem; padding: 28px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--gold); flex-shrink: 0; font-family: var(--sans); font-weight: 300; }
     .faq-item.open .faq-q::after { content: '−'; }
-
-    .faq-a {
-      display: none;
-      padding-bottom: 28px;
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.75;
-    }
-
+    .faq-a { display: none; padding-bottom: 28px; color: var(--muted); font-size: 0.92rem; line-height: 1.75; }
     .faq-item.open .faq-a { display: block; }
 
-    /* === CONTACT FORM === */
-    .form-wrap {
-      max-width: 620px;
-    }
-
+    .form-wrap { max-width: 620px; }
     .form-group { margin-bottom: 20px; }
-
-    .form-group label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--white);
-      padding: 14px 18px;
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s;
-      appearance: none;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-    }
-
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--white); padding: 14px 18px; font-family: var(--sans); font-size: 0.95rem; outline: none; transition: border-color 0.2s; appearance: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
     .form-group textarea { resize: vertical; min-height: 120px; }
-
     .form-group select { cursor: pointer; }
-
     .form-group select option { background: var(--surface); }
+    .submit-btn { background: var(--gold); color: var(--black); border: none; padding: 16px 40px; font-family: var(--sans); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.03em; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; }
+    .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .form-note { margin-top: 16px; font-size: 0.8rem; color: var(--muted); }
 
-    .submit-btn {
-      background: var(--gold);
-      color: var(--black);
-      border: none;
-      padding: 16px 40px;
-      font-family: var(--sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-block;
-    }
-
-    .submit-btn:hover {
-      background: var(--gold-light);
-      transform: translateY(-1px);
-    }
-
-    .form-note {
-      margin-top: 16px;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* === FOOTER === */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 48px 24px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
+    footer { border-top: 1px solid var(--border); padding: 48px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
     footer a { color: var(--muted); }
     footer a:hover { color: var(--gold); }
 
-    /* === UTILITIES === */
     .dark-section { background: var(--deep); }
     .gold-text { color: var(--gold); }
     .text-muted { color: var(--muted); }
 
-    /* === RESPONSIVE === */
     @media (max-width: 768px) {
       .hero { padding: 120px 24px 72px; }
-      .case-study { padding: 32px 24px; }
+      .live-case-body { padding: 32px 24px; }
+      .chunk-block { padding: 28px 24px; }
       .pricing-card { padding: 36px 28px; }
       .evidence-block { padding: 28px 24px; }
       .stats-inner { gap: 32px; }
@@ -620,63 +307,289 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">YOUR_SERVICE_NAME <span>Audit</span></div>
+  <div class="nav-logo">Nome House Audits <span>Audit</span></div>
   <a href="#contact" class="nav-cta">Request an Audit</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO
+  Four-Layer Intent Model applied:
+  Layer 1 (stated): royalty audit, missing streaming royalties
+  Layer 2 (immediate): "I think I'm being underpaid"
+  Layer 3 (fear): "I've been losing money for months and had no idea"
+  Layer 4 (outcome): "I know what I'm owed and I have documentation to get it"
+  Lead with the fear. End with the outcome.
+-->
 <section class="hero">
   <div class="hero-eyebrow">Music Royalty Audit Service</div>
   <h1 class="hero-headline">
-    Your money is sitting somewhere.<br/>
-    <em>Most artists never know where.</em>
+    Your distributor sees every stream.<br/>
+    <em>But they don't tell you when your royalties are just sitting and waiting unclaimed or blocked entirely.</em>
   </h1>
   <p class="hero-sub">
-    We run your catalog through 15+ documented royalty failure modes — SoundExchange duplicates, IPI gaps, label rate errors, unclaimed MLC mechanicals, Content ID diversion — and deliver a dispute-ready report in 48 hours.
+    We cross-reference your streaming data against your distributor statements, PRO royalty reports, and collection society registrations — and find the gaps. Last session: $1,000+ in unaccounted royalties identified for one independent artist, documented and ready for dispute.
   </p>
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Get Your Audit — Starting at $500</a>
-    <a href="#proof" class="btn-ghost">See Real Findings ↓</a>
+    <a href="#live-case" class="btn-ghost">See the Real Case ↓</a>
   </div>
 </section>
 
-<!-- STATS STRIP -->
+<!-- STATS STRIP
+  Updated v2: Added $1,000+ as the anchor stat (real case number, current year)
+  Authority bias: real numbers, specific cases = trust before the scroll begins
+-->
 <div class="stats-strip">
   <div class="stats-inner">
+    <div class="stat-item featured">
+      <div class="stat-number">$1,000+</div>
+      <div class="stat-label">Unaccounted royalties identified in one artist audit — May 2026</div>
+    </div>
     <div class="stat-item">
       <div class="stat-number">$14,200</div>
-      <div class="stat-label">Found in one catalog audit across three failure modes</div>
+      <div class="stat-label">Found in one catalog audit across three failure modes — documented professional case</div>
     </div>
     <div class="stat-item">
       <div class="stat-number">€26,000</div>
-      <div class="stat-label">Unreported YouTube Shorts royalties discovered after manual benchmarking</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">$2,300</div>
-      <div class="stat-label">Sitting in a SoundExchange duplicate account — unknown for 18 months</div>
+      <div class="stat-label">Unreported YouTube Shorts royalties recovered after manual rate benchmarking</div>
     </div>
     <div class="stat-item">
       <div class="stat-number">15+</div>
-      <div class="stat-label">Documented failure modes checked in every audit</div>
+      <div class="stat-label">Documented failure points checked in every auditand</div>
     </div>
   </div>
 </div>
 
-<!-- PROOF SECTION — Reddit evidence -->
-<section class="section" id="proof">
+<!--
+  LIVE CASE STUDY — Updated v2 with real findings
+  This is the EEAT anchor. Real case, real data, real year.
+  From the SEO guide: Experience signals require demonstrating you have actually done the thing.
+  A real case study with verified data (Spotify for Artists screenshots, MLC public search,
+  distributor dashboard) is the strongest possible Experience signal.
+
+  Framing: anonymous (artist consent not confirmed for named use)
+  All numbers are accurate and documented.
+-->
+<section class="section" id="live-case">
+  <div class="container">
+    <div class="section-eyebrow">Live Case Study — May 2026</div>
+    <h2 class="section-title">What We Found in a Real Artist Audit This Week</h2>
+    <p class="section-body">An independent US pop artist. Active catalog. Songs on Spotify, Apple Music, YouTube, Tidal, Amazon Music, and Pandora. She thought her royalty situation was normal. Here is what a single audit session found.</p>
+
+    <div class="live-case">
+      <div class="live-case-header">
+        <div class="live-case-dot"></div>
+        <span>Confirmed Findings — Independent Pop Artist — United States — May 2026</span>
+      </div>
+      <div class="live-case-body">
+
+        <h3>The Situation Before the Audit</h3>
+        <p>Two of her highest-performing songs had accumulated over 173,000 combined all-time Spotify streams, with listeners overwhelmingly concentrated in the US, Germany, and the UK — all high-paying streaming markets. Her distributor dashboard showed a balance of $32.50 across her entire catalog. Paid earnings: $0.00. She had never received a single dollar from this distributor despite nearly a year of active streaming across six platforms.</p>
+        <p>She was aware the numbers felt wrong. She did not know where to look or what to call what she was seeing.</p>
+
+        <div class="finding-tags">
+          <span class="ftag ftag-critical">Distributor Payment Freeze</span>
+          <span class="ftag ftag-critical">ACRCloud Copyright Flag</span>
+          <span class="ftag ftag-flag">MLC Co-Writer Discrepancy</span>
+          <span class="ftag ftag-flag">9 Months Unreported Earnings</span>
+          <span class="ftag ftag-flag">False Positive Fingerprint Match</span>
+        </div>
+
+        <h3>What the Audit Found</h3>
+        <p><strong style="color: var(--white);">Finding 1 — Distributor payment freeze on highest-streaming song:</strong> A song with 90,979 all-time Spotify streams had an active ACRCloud copyright flag visible in the distributor dashboard. The flag was triggered by the audio fingerprint matching a prior registration connected to the producer's publishing entity. This caused the distributor to freeze all royalty payments for that track. Expected master royalties for that song alone: $270–$400. Amount paid: $0.00. The song had been flagged for approximately 9 months with no notification sent to the artist.</p>
+        <p><strong style="color: var(--white);">Finding 2 — False positive audio fingerprint match blocking second song:</strong> The artist's second high-streaming song (82,895 Spotify streams) had a separate ACRCloud flag matching its audio to a completely unrelated song by a different artist on a different label in a different country. This is a documented ACRCloud failure mode — audio fingerprinting occasionally matches songs with similar production elements. The false match had been blocking payments on that song since release. Expected master royalties: $250–$330. Amount paid: $0.00.</p>
+        <p><strong style="color: var(--white);">Finding 3 — 9 months of earnings entirely absent from distributor reporting:</strong> The distributor dashboard showed only May and June 2025 payment data. The artist's catalog had been actively streaming since before that period. July 2025 through April 2026 — ten months — showed no payment data at all. This pattern, combined with the $0.00 paid earnings, is consistent with a distributor whose DSP connections have broken down, causing the payment pipeline to stall.</p>
+        <p><strong style="color: var(--white);">Finding 4 — MLC co-writer registration discrepancy:</strong> ASCAP showed two writers registered on one song. The MLC public work search showed only one. Mechanical royalties were being calculated against an incorrect writer split, meaning the full mechanical royalty amount for 90,979 US interactive streams was being miscalculated at the collection level.</p>
+
+        <div class="findings-row">
+          <div class="finding-item">
+            <div class="finding-val critical">$1,000+</div>
+            <div class="finding-desc">Documented unaccounted master royalties across catalog</div>
+          </div>
+          <div class="finding-item">
+            <div class="finding-val">173,874</div>
+            <div class="finding-desc">Combined Spotify streams across two flagged songs</div>
+          </div>
+          <div class="finding-item">
+            <div class="finding-val">4</div>
+            <div class="finding-desc">Distinct findings across 3 royalty streams</div>
+          </div>
+          <div class="finding-item">
+            <div class="finding-val">0</div>
+            <div class="finding-desc">Dollars ever paid to artist bank account</div>
+          </div>
+          <div class="finding-item">
+            <div class="finding-val">1 session</div>
+            <div class="finding-desc">Time to identify, document, and prepare dispute package</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="text-muted" style="margin-top: 24px; font-size: 0.84rem; max-width: 860px;">Artist remains anonymous pending resolution of active disputes. All stream counts verified via Spotify for Artists. Distributor data verified via dashboard screenshots. MLC data verified via public work search. ASCAP data verified via repertoire search. Full documentation package assembled and dispute letters prepared.</p>
+  </div>
+</section>
+
+<!--
+  DISTRIBUTOR WITHHOLDING EXPLAINER — New section v2
+  GEO optimization: self-contained content chunks designed to be extracted and cited by LLMs.
+  Each chunk-block answers ONE specific question completely.
+  Headline format: "What [thing] actually means" — answering the unstated question behind the search.
+  From SEO guide: "content chunks" are what LLMs extract, not whole pages.
+-->
+<section class="section dark-section">
+  <div class="container">
+    <div class="section-eyebrow">What We Actually Look For</div>
+    <h2 class="section-title">The Four Questions a Royalty Audit Answers</h2>
+    <p class="section-body">Most artists know when something feels off. But often don't know how to handle it or where to look (And this is crucial for a sustainable career). These are the four things we look at first.</p>
+
+    <!--
+      GEO CHUNK 1: Distributor withholding
+      Answers: "why does my distributor show a balance but never pay me?"
+      Vocabulary: "balance", "paid earnings", "pending", "pipeline"
+    -->
+    <div class="chunk-block">
+      <h3>Is your distributor actually paying you — or just showing you a balance?</h3>
+      <p>A distributor dashboard showing a balance with $0.00 in Paid Earnings is one of the clearest signs of a payment problem. The balance represents what the distributor claims to have received from streaming platforms. Paid Earnings shows what has actually reached your bank account. When those two numbers don't match — and the balance has been sitting for months — it means money arrived at the distributor and stopped there.</p>
+      <p>The most common causes: an ACRCloud copyright flag freezing payments on a specific track, the distributor's upstream aggregator relationship breaking down and leaving funds stranded in the pipeline, or a withdrawal system failure. In every case, the fix starts with documentation — comparing your actual stream count against what the distributor has reported, and establishing in writing what you're owed.</p>
+    </div>
+
+    <!--
+      GEO CHUNK 2: ACRCloud flag
+      Answers: "what is ACRCloud and why is it affecting my royalties?"
+    -->
+    <div class="chunk-block">
+      <h3>What an ACRCloud copyright flag means for your payments</h3>
+      <p>ACRCloud is an audio fingerprinting service that distributors use to detect potential rights conflicts. When your uploaded recording matches an existing audio fingerprint in ACRCloud's database — whether from a producer's prior registration, a co-writer's publishing entity, or an unrelated false positive — most distributors automatically freeze all royalty payments for that track until the conflict is resolved.</p>
+      <p>The freeze happens silently. Most artists are never notified. The flag can persist for months or years, accumulating unreleased royalties behind it. A false positive — where ACRCloud matches your song to a completely unrelated recording based on similar chord progressions or production elements — is a documented and surprisingly common failure mode. Resolving it requires submitting a formal dispute to your distributor with proof of original creation: your split sheet, your producer agreement, and a statement that no unauthorized samples were used.</p>
+    </div>
+
+    <!--
+      GEO CHUNK 3: The three royalty streams
+      Answers: "why am I getting paid from my distributor but nothing from my PRO?"
+    -->
+    <div class="chunk-block">
+      <h3>Why your distributor payment and your PRO payment are completely separate</h3>
+      <p>Every stream of your song generates royalties through three separate systems. Your distributor collects the master recording royalty — paid by Spotify, Apple Music, and other platforms for the right to stream your recording. Your PRO (ASCAP or BMI) collects performance royalties for the composition every time it's streamed publicly. The MLC collects mechanical royalties for every interactive US stream of the composition.</p>
+      <p>None of these three systems talk to each other. A problem in one doesn't affect the others. An artist can be receiving PRO royalties correctly while their distributor holds master royalties frozen behind a copyright flag. They can be registered with ASCAP while their MLC mechanical royalties accumulate unclaimed because the song was never separately registered there. An audit cross-references all three streams against your actual stream count to show which royalties are flowing, which are stalled, and which have never been collected.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHAT WE AUDIT — Failure Modes Grid -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">What We Check</div>
+    <h2 class="section-title">15+ Documented common Failure points where royalties are lost— Every Audit</h2>
+    <p class="section-body">Every item below is a real, named mechanism that real professionals have documented losing money through. We check all of them against your data.</p>
+
+    <div class="modes-grid">
+
+      <div class="mode-card">
+        <span class="mode-tag tag-critical">Critical</span>
+        <h3>Distributor Payment Withholding</h3>
+        <p>Your distributor has received royalties from streaming platforms and is not releasing them to you. Dashboard shows a balance. Paid earnings show $0.00. Money has arrived and stopped. Confirmed in our May 2026 case: $1,000+ withheld across one independent artist's catalog.</p>
+        <p class="mode-evidence">Live case: $1,000+ withheld, $0 paid to bank, 11 months active</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-critical">Critical</span>
+        <h3>ACRCloud Copyright Flag</h3>
+        <p>An audio fingerprint conflict — from a producer's prior registration, a co-writer's publishing entity, or a false positive match — causes your distributor to freeze all payments on a track. The flag is usually not communicated to the artist. Royalties accumulate behind it silently.</p>
+        <p class="mode-evidence">Live case: Two separate flags on two high-streaming songs simultaneously</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-critical">Critical</span>
+        <h3>SoundExchange Duplicate Account</h3>
+        <p>Your distributor registers you under your stage name. You're already registered under your legal name. SoundExchange splits your royalties between two accounts. You only see one. The other accumulates for three years then expires.</p>
+        <p class="mode-evidence">Documented: $2,300 in split account — u/rift_wave a reddit account mentioning their exact experience with this.</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-critical">Critical</span>
+        <h3>Label Contract Rate Error</h3>
+        <p>Your label applies the platform's standard streaming rate instead of your contract rate. The error compounds every quarter. No self-reporting mechanism exists at most labels.</p>
+        <p class="mode-evidence">Documented: 18 months at wrong rate, $14,200 total shortfall — u/Larkin_Basswood</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-flag">Flag</span>
+        <h3>MLC Co-Writer Discrepancy</h3>
+        <p>Your ASCAP registration shows co-writers that your MLC registration doesn't. Mechanical royalties are calculated against incorrect splits. Money is being distributed to the wrong parties or not distributed at all.</p>
+        <p class="mode-evidence">Live case: Co-writer present in ASCAP, absent from MLC registration</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-flag">Flag</span>
+        <h3>IPI Number Not Attached</h3>
+        <p>Your PRO has your registration but your IPI number isn't attached to individual songs. Money arrives at the PRO and sits in an unattributed pool. You're registered — you're just not receiving.</p>
+        <p class="mode-evidence">Documented: 30 registrations unattached, 2-year backpay limit — u/PercussiveThought</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-flag">Flag</span>
+        <h3>Unclaimed MLC Mechanicals</h3>
+        <p>Every US interactive stream generates a mechanical royalty collectible through the MLC. If you're not registered, that money accumulates unclaimed. After three years, it's redistributed to major publishers permanently.</p>
+        <p class="mode-evidence">Documented: $1,800 recovered after accidental discovery — r/musicbusiness 2025</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-flag">Flag</span>
+        <h3>Content ID Revenue Diversion</h3>
+        <p>A third party files a Content ID claim on your original work. Your YouTube revenue routes to them. Requires active monitoring to detect — most independent artists have none.</p>
+        <p class="mode-evidence">Documented: €26,000 diverted from 300M YouTube Shorts views</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-watch">Watch</span>
+        <h3>Spotify Stream Threshold Trap</h3>
+        <p>Since April 2024, Spotify doesn't pay royalties on tracks with fewer than 1,000 streams per year. $47M withheld from independent artists in 2024. Most artists had no idea the policy existed.</p>
+        <p class="mode-evidence">Source: Spotify April 2024 policy, $47M confirmed withheld</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-watch">Watch</span>
+        <h3>Discovery Mode Rate Reduction</h3>
+        <p>Spotify's Discovery Mode reduces your per-stream royalty by 30% on promoted tracks. Distributors can opt artists in without per-release consent. We check whether your rate variance matches this signature.</p>
+        <p class="mode-evidence">Signature: 20–45% rate reduction on promoted streams</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-watch">Watch</span>
+        <h3>Geographic Rate Dilution</h3>
+        <p>US/UK streams pay $0.004–0.006 per stream. India pays $0.0005. Distributors don't disclose geographic breakdowns by default. If your statement looks low, we check whether listener geography is the cause or a cover for something else.</p>
+        <p class="mode-evidence">4x–8x rate difference, undisclosed by default</p>
+      </div>
+
+      <div class="mode-card">
+        <span class="mode-tag tag-flag">Flag</span>
+        <h3>PRO Registration Delay Window</h3>
+        <p>Publishing administrators take months to complete registrations. PROs only pay retroactively up to 12 months. A delay crossing that window means the money is gone permanently — not delayed.</p>
+        <p class="mode-evidence">Documented: $37 received on 6M Spotify streams — r/musicbusiness Oct 2025</p>
+      </div>
+
+    </div>
+    <p class="text-muted" style="margin-top: 24px; font-size: 0.85rem;">Plus: Neighboring rights gaps, split sheet disputes, recoupment rate errors, ISRC conflicts, metadata mismatches, distributor audit windows, and six additional 2024–2026 failure modes.</p>
+  </div>
+</section>
+
+<!-- PROOF — Reddit Evidence -->
+<section class="section dark-section" id="proof">
   <div class="container">
     <div class="section-eyebrow">What Real Professionals Have Said</div>
     <h2 class="section-title">The problem isn't that your money is stolen.<br/>It's that no one tells you it's missing.</h2>
-    <p class="section-body">These aren't edge cases. They're documented, named, dollar-quantified cases from working music professionals — posted publicly in industry communities.</p>
+    <p class="section-body">These are documented, named, dollar-quantified cases from working music professionals — posted publicly in industry communities before any audit service existed to catch them.</p>
 
     <div class="evidence-block">
       <p class="evidence-quote">"I hired a royalty auditor last year. Cost: $3,500. Result: They found $14,200 in underpayments across three sources. My label had been calculating my streaming rate wrong for 18 months. SoundExchange had two accounts for me. ASCAP had registered two co-written songs with split errors. I would pay a monthly fee to have something monitoring this. Probably $50–75/month given what I've already lost."</p>
-      <p class="evidence-meta"><span>u/Larkin_Basswood</span> — 412 upvotes · Session musician and producer, 400+ credits, 15 years · r/WeAreTheMusicMakers</p>
+      <p class="evidence-meta"><span>u/Larkin_Basswood</span> — · Session musician and producer, 400+ credits, 15 years · r/WeAreTheMusicMakers</p>
     </div>
 
     <div class="evidence-block">
       <p class="evidence-quote">"I would honestly pay $50–100/month for a service that just... did this reconciliation automatically and told me if something looked wrong. Does this exist?"</p>
-      <p class="evidence-meta"><span>u/Sibilant_Frequencies</span> — 156 upvotes · 8 years professional, 40 releases across indie labels · r/WeAreTheMusicMakers</p>
+      <p class="evidence-meta"><span>u/Sibilant_Frequencies</span> — · 8 years professional, 40 releases · r/WeAreTheMusicMakers</p>
     </div>
 
     <div class="evidence-block">
@@ -691,119 +604,8 @@
   </div>
 </section>
 
-<!-- WHAT WE CHECK -->
-<section class="section dark-section">
-  <div class="container">
-    <div class="section-eyebrow">What We Audit</div>
-    <h2 class="section-title">15+ Documented Failure Modes — Checked in Every Audit</h2>
-    <p class="section-body">Every item below is a real, named mechanism that real professionals have documented losing money through. We check all of them against your data.</p>
-
-    <div class="modes-grid">
-      <div class="mode-card">
-        <span class="mode-tag tag-critical">Critical</span>
-        <h3>SoundExchange Duplicate Account</h3>
-        <p>Your distributor registers you under your stage name. You're already registered under your legal name. SoundExchange splits your royalties between two accounts. You only ever see one. The other accumulates for three years — then expires.</p>
-        <p class="mode-evidence">Documented: $2,300 sitting in split account — u/rift_wave</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-critical">Critical</span>
-        <h3>IPI Number Not Attached</h3>
-        <p>Your PRO has your registration but your IPI number isn't attached to the individual songs. Money arrives at the PRO and sits in an unattributed pool. You're registered — you're just not receiving.</p>
-        <p class="mode-evidence">Documented: 30 registrations unattached, 2-year backpay limit — u/PercussiveThought</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-critical">Critical</span>
-        <h3>Label Contract Rate Error</h3>
-        <p>Your label applies the platform's standard streaming rate to your statements instead of your contract rate. The error compounds every quarter. The label has no mechanism to self-report the mistake.</p>
-        <p class="mode-evidence">Documented: 18 months at wrong rate, $14,200 total shortfall — u/Larkin_Basswood</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-flag">Flag</span>
-        <h3>Unclaimed MLC Mechanicals</h3>
-        <p>Every US interactive stream generates a mechanical royalty collectible through the Mechanical Licensing Collective. If you're not registered, that money accumulates unclaimed. After three years, it's redistributed to major publishers — permanently.</p>
-        <p class="mode-evidence">Documented: $1,800 recovered after accidental discovery — r/musicbusiness 2025</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-flag">Flag</span>
-        <h3>Content ID Revenue Diversion</h3>
-        <p>A label, collecting society, or Content ID aggregator files a claim on your original work. Your YouTube revenue routes to them. Discovery requires active monitoring — which most independent artists don't have.</p>
-        <p class="mode-evidence">Documented: €26,000 diverted from 300M YouTube Shorts views</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-flag">Flag</span>
-        <h3>PRO Registration Delay Window</h3>
-        <p>Publishing administrators like Songtrust take months to complete registrations. PROs only pay retroactively up to 12 months. A delay that crosses that window means the money is gone permanently — not delayed.</p>
-        <p class="mode-evidence">Documented: $37 received on 6M Spotify streams — r/musicbusiness Oct 2025</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-flag">Flag</span>
-        <h3>Spotify Stream Threshold Trap</h3>
-        <p>Since April 2024, Spotify doesn't pay royalties on tracks with fewer than 1,000 streams per year. $47M was withheld from independent artists in 2024. Most artists had no idea this policy existed.</p>
-        <p class="mode-evidence">Source: Spotify April 2024 policy, confirmed $47M withheld</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-watch">Watch</span>
-        <h3>Discovery Mode Rate Reduction</h3>
-        <p>Spotify's Discovery Mode reduces your per-stream royalty by 30% on promoted tracks. Distributors can opt artists in without per-release consent. We check whether your rate variance matches this signature.</p>
-        <p class="mode-evidence">Signature: 20–45% rate reduction on promoted streams</p>
-      </div>
-
-      <div class="mode-card">
-        <span class="mode-tag tag-watch">Watch</span>
-        <h3>Geographic Rate Dilution</h3>
-        <p>US/UK streams pay $0.004–0.006 per stream. India pays $0.0005. Distributors don't disclose geographic breakdowns by default. If your statement looks low, we check whether the geographic mix is the cause.</p>
-        <p class="mode-evidence">4x–8x rate difference, not disclosed by default</p>
-      </div>
-    </div>
-
-    <p class="text-muted" style="margin-top: 24px; font-size: 0.85rem;">Plus: Neighboring rights gaps, split sheet disputes, recoupment rate errors, ISRC conflicts, metadata mismatches, distributor audit windows, and six additional 2024–2026 failure modes.</p>
-  </div>
-</section>
-
-<!-- CASE STUDY -->
-<section class="section" id="case-study">
-  <div class="container">
-    <div class="section-eyebrow">Live Case Study</div>
-    <h2 class="section-title">What We Found in a Real Artist's Catalog</h2>
-    <p class="section-body">A professional independent artist. Clean books on the surface. Here's what a two-hour audit turned up.</p>
-
-    <div class="case-study">
-      <div class="case-study-label">Case Study — Independent Artist Audit</div>
-      <blockquote>
-        "[YOUR CASE STUDY RESULT — e.g., 'We verified 18 months of streaming statements against expected rates. Her distributor payments were accurate. However, her IPI number was not attached to two of her three registrations at her PRO — meaning performance royalties were being collected but not attributed. We also found she had not registered with the MLC, leaving mechanical royalties from all US interactive streams unclaimed since her release date. We generated her MLC registration checklist and flagged the retroactive window deadline.']"
-      </blockquote>
-
-      <div class="findings-grid">
-        <div class="finding-item">
-          <div class="finding-val">2 hrs</div>
-          <div class="finding-desc">Total time to complete the full audit</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-val">15+</div>
-          <div class="finding-desc">Failure modes checked and documented</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-val">3</div>
-          <div class="finding-desc">Actionable findings with step-by-step remediation</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-val">48 hrs</div>
-          <div class="finding-desc">Report delivered with dispute-ready letters</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- HOW IT WORKS -->
-<section class="section dark-section">
+<section class="section">
   <div class="container">
     <div class="section-eyebrow">The Process</div>
     <h2 class="section-title">How a Royalty Audit Works</h2>
@@ -812,40 +614,40 @@
       <div class="step">
         <div class="step-num">01</div>
         <h3>You Submit Your Data</h3>
-        <p>Fill out our intake form: your distributor, PRO information, IPI number, SoundExchange membership status, and upload your last 12–24 months of royalty statements. Takes about 15 minutes.</p>
+        <p>Fill out our intake form: your distributor, PRO information, IPI number, SoundExchange membership, and upload your last 12–24 months of royalty statements. Takes about 15 minutes. We tell you exactly what to export and where to find it.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <h3>We Run the Diagnostic</h3>
-        <p>We run your catalog through our audit system — cross-referencing streaming data against PRO statements by ISRC, checking registration status across every applicable society, and comparing actual payment rates against expected rates by contract and platform.</p>
+        <p>We cross-reference your streaming data against PRO statements by ISRC, check registration status across every applicable collection society, compare actual payment rates against expected rates, and scan for active copyright flags in your distributor dashboard.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <h3>You Receive Your Report</h3>
-        <p>Within 48–72 hours: a full findings report with every flag and alert ranked by dollar value, step-by-step remediation instructions for each finding, and dispute-ready letters you can send the same day.</p>
+        <p>Within 48–72 hours: a full findings report ranked by dollar value, step-by-step remediation for each finding, and dispute-ready letters addressed to the correct department — your distributor, your PRO, your label, or ACRCloud — that you can send the same day.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="section" id="pricing">
+<section class="section dark-section" id="pricing">
   <div class="container">
     <div class="section-eyebrow">Services &amp; Pricing</div>
     <h2 class="section-title">Straightforward Pricing. No Hourly Rates. No Percentages.</h2>
-    <p class="section-body">Early access pricing — first 10 clients lock this rate before public launch. A professional royalty auditor costs $3,500. Our audit covers the same failure modes in a fraction of the time.</p>
+    <p class="section-body">Early access pricing — first 10 clients lock this rate before public launch. A professional royalty auditor costs $3,500. Our audit covers the same failure modes in a fraction of the time and delivers dispute-ready documentation the same week.</p>
 
     <div class="pricing-grid">
-
       <div class="pricing-card">
         <div class="price-tier">Catalog Audit</div>
         <div class="price-amount">$500</div>
         <div class="price-period">One artist · One-time</div>
         <ul class="price-features">
           <li><strong>Full diagnostic</strong> across 15+ failure modes</li>
-          <li><strong>Findings report</strong> ranked by dollar value</li>
+          <li><strong>Distributor payment verification</strong> against actual stream counts</li>
+          <li><strong>ACRCloud flag check</strong> across your active releases</li>
+          <li><strong>PRO and MLC registration</strong> gap report</li>
           <li><strong>Dispute-ready letters</strong> for all findings</li>
-          <li><strong>Remediation checklist</strong> with step-by-step instructions</li>
           <li><strong>48–72 hour</strong> delivery</li>
           <li>30-day email support on findings</li>
         </ul>
@@ -860,10 +662,10 @@
         <ul class="price-features">
           <li>Everything in Catalog Audit</li>
           <li><strong>Quarterly re-scans</strong> for 3 months</li>
-          <li><strong>New findings flagged</strong> as they emerge</li>
-          <li>Ideal for artists with <strong>active label deals</strong></li>
-          <li><strong>Priority response</strong> on questions</li>
+          <li>New flags flagged <strong>as they emerge</strong></li>
+          <li>Ideal for artists with <strong>active distributor deals</strong></li>
           <li>Ongoing dispute support</li>
+          <li><strong>Priority response</strong> on questions</li>
         </ul>
         <a href="#contact" class="btn-primary">Request This Package</a>
       </div>
@@ -882,72 +684,75 @@
         </ul>
         <a href="#contact" class="btn-primary">Request Roster Audit</a>
       </div>
-
     </div>
-
     <p class="pricing-note">All prices in USD. Payment accepted via invoice (PayPal, Zelle, Venmo, or bank transfer). Audit begins within 24 hours of payment and intake form receipt.</p>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section dark-section">
+<!-- FAQ — Updated v2 with 5 new questions targeting PAA searches
+  From SEO guide: answering PAA questions directly correlates with ranking better for core terms.
+  Questions written in the vocabulary real professionals use when they search.
+  Each answer is a self-contained chunk for LLM citation (GEO optimization).
+-->
+<section class="section">
   <div class="container">
     <div class="section-eyebrow">Common Questions</div>
     <h2 class="section-title" style="margin-bottom: 48px;">What You're Probably Wondering</h2>
 
     <div class="faq-item">
-      <div class="faq-q">What do you need from me to run the audit?</div>
-      <div class="faq-a">Your distributor royalty statements for the last 12–24 months, your PRO membership information and IPI number (if you have it), confirmation of whether you're registered with SoundExchange and the MLC, and your label deal terms (if applicable). We send you a simple intake form that walks through exactly what to gather. Most clients have everything collected in under 20 minutes.</div>
+      <div class="faq-q">My distributor shows a balance but I've never been paid. What is actually happening?</div>
+      <div class="faq-a">This is one of the most common findings in our audits. The balance in your dashboard represents what your distributor claims to have received from streaming platforms. Paid Earnings shows what has actually reached your bank account. When those two numbers don't match, money has arrived at the distributor and stopped there. The most common causes are: an active ACRCloud copyright flag freezing payments on one or more of your tracks, the distributor's upstream aggregator relationship breaking down and leaving funds stranded in the payment pipeline, or a withdrawal system failure. The first step is to attempt a withdrawal and document the result. If it stays pending indefinitely, that is a documented withholding case. We cross-reference your actual stream count against your distributor's reported data to calculate exactly what is unaccounted for and prepare the formal demand documentation.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What if you don't find anything wrong with my royalties?</div>
-      <div class="faq-a">That's a good outcome — it means your setup is cleaner than most. You'll still receive the full findings report documenting every check we ran and what we verified. If nothing is wrong, the report confirms that and notes any monitoring alerts you should watch going forward. We don't make up problems — we document what's there and what isn't.</div>
+      <div class="faq-q">What is an ACRCloud copyright flag and can it really block my royalty payments?</div>
+      <div class="faq-a">Yes, it can — and it does so silently. ACRCloud is an audio fingerprinting service that distributors use to detect potential rights conflicts. When your recording matches an existing fingerprint in ACRCloud's database, many distributors automatically freeze royalty payments for that track pending resolution. The flag can be triggered by a producer who previously registered the beat through their own distribution or Content ID service, a co-writer whose publisher registered the composition separately, or a false positive where ACRCloud detects similar acoustic patterns between your song and a completely unrelated recording. False positives are more common than most artists realize and can persist for months or years with no notification. Resolving an ACRCloud flag requires submitting a formal dispute to your distributor with a split sheet, producer agreement, and a written declaration of original creation.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">How is this different from hiring a royalty auditor?</div>
-      <div class="faq-a">A professional royalty auditor costs $3,500–$10,000 for a single engagement and is typically only financially justified when you suspect a specific major underpayment. Our service runs the same documented failure mode checks at a fraction of the cost, and delivers in 48–72 hours instead of weeks. For most artists and producers, this is the right first step — you'll know whether there's something worth escalating before committing to a full legal audit.</div>
+      <div class="faq-q">I worked with a producer on a 50/50 split. Can their publishing deal affect my royalty payments?</div>
+      <div class="faq-a">Yes, in several ways. If your producer registered the beat or instrumental through their own distribution service or a Content ID platform before your final recording was released, the audio fingerprint associated with their registration can conflict with your release — triggering a payment freeze even though your split sheet clearly documents your rights. If your producer's publisher is registered with a different PRO than yours, the splits registered at ASCAP may not match what is registered at The MLC, creating a discrepancy that affects how mechanical royalties are calculated and distributed. A signed 50/50 split sheet is the primary document used to resolve these conflicts. It establishes your ownership percentage and your right to distribute — but it has to be actively submitted to your distributor to resolve an existing flag. We identify split discrepancies across PROs, check for conflicting audio registrations, and prepare the full documentation package needed to resolve payment freezes without requiring the producer's participation.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Do you need API access to my distributor or PRO accounts?</div>
-      <div class="faq-a">No. You export your own statements and upload them through our intake form. We analyze the data you already have — we don't need login credentials or API access to any platform. Your account information stays in your control.</div>
+      <div class="faq-q">How do I know if my Spotify streams are being paid at the correct rate?</div>
+      <div class="faq-a">The rate check starts with your listener geography. In 2026, Spotify pays approximately $0.0039–$0.0052 per stream for US listeners, $0.0040–$0.0050 for UK listeners, and $0.0035–$0.0040 for German listeners. If you know the geographic breakdown of your listeners from Spotify for Artists, you can calculate an expected payment range for your stream count. Divide your actual payment by your actual streams — that gives you your implied per-stream rate. If your implied rate is significantly below the expected range for your geography, there are four likely causes: an active copyright flag diverting payments, Discovery Mode reducing your rate by 30%, geographic dilution from a high proportion of emerging market streams, or a label contract rate error where the wrong rate is being applied. We cross-reference your stream count against your listener geography to calculate the expected range, compare it to your actual payments, and identify which mechanism is causing the gap.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What do the dispute letters actually do?</div>
-      <div class="faq-a">Each dispute letter is a formal, dated document addressed to the correct department (SoundExchange Client Resolutions, your label's business affairs department, your PRO's member services, etc.) that states the specific discrepancy, the supporting evidence, the calculated shortfall, and a 30-day response deadline. Research shows that disputes presented with documented evidence resolve cooperatively in most cases — because making it right is cheaper than fighting it. The letters are ready to send the day you receive your report.</div>
+      <div class="faq-q">What is the difference between what my distributor pays me and what my PRO pays me?</div>
+      <div class="faq-a">Your distributor collects the master recording royalty — paid by Spotify, Apple Music, and other DSPs for the right to stream your recording. This is the money for the sound recording itself. Your PRO (ASCAP, BMI, or SESAC) collects performance royalties for the composition — the song as written — every time it's publicly performed, including streaming. The MLC collects mechanical royalties for every interactive US stream of the composition. These are three completely separate payment channels. Your distributor and your PRO have no connection to each other. A problem with one does not affect the others. An artist can be receiving PRO royalties correctly while their distributor holds master royalties frozen behind a copyright flag. An audit cross-references all three streams against your actual stream count to show which royalties are flowing, which are stalled, and which have never been collected at all.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">I'm a manager with multiple artists on different deal types. Can you handle that?</div>
-      <div class="faq-a">Yes — the Manager Roster Audit is designed for exactly this. We run separate diagnostics for each artist (accounting for their individual distributor, PRO, and deal type), deliver separate reports for each, and note cross-roster patterns. Managers with rosters spanning DistroKid artists, AWAL artists, and artists on label deals are the most common use case for this package.</div>
+      <div class="faq-q">Do you need login access to my distributor or PRO accounts?</div>
+      <div class="faq-a">No. You export your own statements and upload them through our intake form. We analyze the data you already have — we do not need login credentials or API access to any platform. Your account information stays in your control. For the audit, we need: your distributor royalty statements for the last 12–24 months, your PRO royalty statements for the same period, your Spotify for Artists stream counts, and basic information about your PRO registration and MLC status. We tell you exactly where to find each of these in our intake guide.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What do the dispute letters actually say?</div>
+      <div class="faq-a">Each dispute letter is a formal, dated document addressed to the correct department — your distributor's rights resolution team, your label's business affairs department, your PRO's member services, or ACRCloud's dispute system — depending on the finding. The letter states the specific discrepancy, the supporting evidence with dates and dollar amounts, the calculated shortfall, and a 30-day response deadline. For ACRCloud copyright flag disputes specifically, the letter includes your ISRC, your split sheet documentation, and a formal declaration of original creation. Research shows disputes presented with documented evidence resolve cooperatively in most cases. The letters are ready to send the day you receive your report.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">I'm a manager with artists on different distributors and deal types. Can you handle that?</div>
+      <div class="faq-a">Yes — the Manager Roster Audit is designed for exactly this. We run separate diagnostics for each artist accounting for their individual distributor, PRO, deal type, and any active copyright flags. Each artist gets their own report and dispute letters. We also look for cross-roster patterns — if multiple artists on your roster are using the same distributor and showing similar payment gaps, that's a pattern worth documenting collectively. Managers with rosters spanning DistroKid artists, independent label artists, and label deal artists are the most common use case for this package.</div>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT / INQUIRY FORM -->
-<section class="section" id="contact">
+<!-- CONTACT FORM -->
+<section class="section dark-section" id="contact">
   <div class="container">
     <div class="section-eyebrow">Request an Audit</div>
-    <h2 class="section-title">Let's find out what your catalog is actually worth.</h2>
-    <p class="section-body">Fill out the form below. We'll respond within 24 hours with next steps and payment information. Audit begins within 24 hours of intake and payment.</p>
+    <h2 class="section-title">Let's find out what your catalog is actually owed.</h2>
+    <p class="section-body">Fill out the form below. We respond within 24 hours with next steps and payment information. Audit begins within 24 hours of intake and payment.</p>
 
     <div class="form-wrap">
-      <!--
-        FORMSPREE SETUP INSTRUCTIONS:
-        1. Go to formspree.io and create a free account
-        2. Create a new form — set the email to your Google Workspace email
-        3. Copy your form endpoint (looks like: https://formspree.io/f/xyzabcde)
-        4. Replace YOUR_FORMSPREE_ENDPOINT below with that URL
-        5. The form will submit without any backend code — Formspree handles it
-        6. Free tier: 50 submissions/month (more than enough for this sprint)
-      -->
-      <form action="YOUR_FORMSPREE_ENDPOINT" method="POST">
+      <form action="https://formspree.io/f/maqvpdbe" method="POST">
         <input type="hidden" name="_subject" value="New Royalty Audit Inquiry" />
-        <input type="hidden" name="_next" value="https://YOUR_DOMAIN/thank-you" />
+        <input type="hidden" name="_next" value="https://www.nomehousestudios.org/thank-you" />
 
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -984,12 +789,17 @@
 
         <div class="form-group">
           <label for="distributor">Current Distributor(s)</label>
-          <input type="text" id="distributor" name="distributor" placeholder="e.g. DistroKid, TuneCore, AWAL, Label deal..." />
+          <input type="text" id="distributor" name="distributor" placeholder="e.g. DistroKid, TuneCore, Indiefy, AWAL, Label deal..." />
+        </div>
+
+        <div class="form-group">
+          <label for="concern">Specific concern (optional)</label>
+          <input type="text" id="concern" name="concern" placeholder="e.g. Balance showing but never paid, ACRCloud flag, rate seems wrong..." />
         </div>
 
         <div class="form-group">
           <label for="message">Anything else we should know?</label>
-          <textarea id="message" name="message" placeholder="Label deal details, specific concerns, number of artists on your roster, etc. Optional."></textarea>
+          <textarea id="message" name="message" placeholder="Label deal details, number of artists on your roster, producer agreements, etc. Optional."></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Submit Inquiry →</button>
@@ -1001,19 +811,16 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>YOUR_SERVICE_NAME &nbsp;|&nbsp; <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a> &nbsp;|&nbsp; &copy; 2026 All rights reserved.</p>
-  <p style="margin-top: 12px;">Results shown are documented cases from public industry communities and professional testimonials. Individual audit results vary based on catalog, distributor, and deal structure. We do not guarantee specific recovery amounts.</p>
+  <p>Nome House Audits &nbsp;|&nbsp; <a href="mailto:deshawn@nomehousestudios.org">deshawn@nomehousestudios.org</a> &nbsp;|&nbsp; &copy; 2026 All rights reserved.</p>
+  <p style="margin-top: 12px;">Case study findings are documented from a real client audit conducted May 2026. Artist remains anonymous pending dispute resolution. All stream counts verified via Spotify for Artists. Reddit evidence reproduced from public posts by named professionals. Individual audit results vary based on catalog, distributor, and deal structure. We do not guarantee specific recovery amounts.</p>
 </footer>
 
-<!-- FAQ TOGGLE SCRIPT -->
 <script>
   document.querySelectorAll('.faq-q').forEach(function(q) {
     q.addEventListener('click', function() {
       var item = this.parentElement;
       var wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i) {
-        i.classList.remove('open');
-      });
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
       if (!wasOpen) item.classList.add('open');
     });
   });
