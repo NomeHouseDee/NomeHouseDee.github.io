@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artist Intake — Royalty Audit | YOUR_SERVICE_NAME</title>
+  <title>Artist Intake — Royalty Audit | Nome House Audits</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
@@ -562,7 +562,7 @@
 
 <!-- HEADER -->
 <header class="page-header">
-  <div class="logo">YOUR_SERVICE_NAME <span>Audit</span></div>
+  <div class="logo">Nome House Audits <span>Audit</span></div>
   <a href="/" class="back-link">← Back to site</a>
 </header>
 
@@ -572,7 +572,7 @@
 <div class="success-screen" id="success-screen">
   <div class="success-icon">✓</div>
   <h1 class="success-title">Received.</h1>
-  <p class="success-sub">Your intake is in. We'll review everything and get back to you within 24 hours with next steps. If you haven't already, create your Google Drive folder and share it with <strong>YOUR_EMAIL</strong>.</p>
+  <p class="success-sub">Your intake is in. We'll review everything and get back to you within 24 hours with next steps. If you haven't already, create your Google Drive folder and share it with <strong>deshawn@nomehousestudios.org</strong>.</p>
 </div>
 
 <!-- MAIN FORM -->
@@ -589,10 +589,10 @@
     <div><strong>One form per artist.</strong> If you manage a roster, submit this separately for each artist. Fields marked with a red tag are required. Everything else helps us find more — fill in what you have, skip what you don't.</div>
   </div>
 
-  <form id="intake-form" action="YOUR_FORMSPREE_ENDPOINT" method="POST" novalidate>
+  <form id="intake-form" action="https://formspree.io/f/xykondpp" method="POST" novalidate>
 
     <input type="hidden" name="_subject" value="New Royalty Audit Intake" />
-    <input type="hidden" name="_next" value="https://YOUR_DOMAIN/intake#success" />
+    <input type="hidden" name="_next" value="https://www.nomehousestudios.org/intake#success" />
 
     <!-- ──────────────────────────────────────────── -->
     <!-- SECTION 1: ARTIST IDENTITY -->
@@ -855,7 +855,7 @@
 
       <div class="tier-notice" style="margin-bottom: 24px;">
         <div class="tier-dot"></div>
-        <div><strong>Don't upload files here.</strong> Create a Google Drive folder named "<em>[Artist Name] — Royalty Audit</em>", drop everything in it, share it with <strong>YOUR_EMAIL</strong>, and paste the link below. Add files as you collect them — you don't need everything before submitting.</div>
+        <div><strong>Don't upload files here.</strong> Create a Google Drive folder named "<em>[Artist Name] — Royalty Audit</em>", drop everything in it, share it with <strong>deshawn@nomehousestudios.org</strong>, and paste the link below. Add files as you collect them — you don't need everything before submitting.</div>
       </div>
 
       <!-- Required -->
@@ -915,7 +915,7 @@
       </div>
 
       <div class="drive-input-block">
-        <p>Once your folder is ready and shared with <strong>YOUR_EMAIL</strong>, paste the link here. You can submit now and share the link separately by email if you prefer.</p>
+        <p>Once your folder is ready and shared with <strong>deshawn@nomehousestudios.org</strong>, paste the link here. You can submit now and share the link separately by email if you prefer.</p>
         <div class="field-group optional">
           <label for="drive_link">Google Drive Folder Link</label>
           <input type="url" id="drive_link" name="drive_folder_link" placeholder="https://drive.google.com/drive/folders/..." />
@@ -1012,7 +1012,7 @@
 
     <!-- SUBMIT -->
     <div class="submit-section">
-      <p class="submit-note">We'll review everything and get back within 24 hours. If you have more information to share after submitting — files, additional songs, anything — just email it to <strong>YOUR_EMAIL</strong>.</p>
+      <p class="submit-note">We'll review everything and get back within 24 hours. If you have more information to share after submitting — files, additional songs, anything — just email it to <strong>deshawn@nomehousestudios.org</strong>.</p>
       <button type="submit" class="submit-btn" id="submit-btn">Submit Intake →</button>
     </div>
 
@@ -1297,12 +1297,12 @@ document.getElementById('intake-form').addEventListener('submit', async function
     } else {
       btn.disabled = false;
       btn.textContent = 'Submit Intake →';
-      alert('There was an issue submitting. Please email your intake directly to YOUR_EMAIL.');
+      alert('There was an issue submitting. Please email your intake directly to deshawn@nomehousestudios.org.');
     }
   } catch (err) {
     btn.disabled = false;
     btn.textContent = 'Submit Intake →';
-    alert('Network error. Please email your intake to YOUR_EMAIL.');
+    alert('Network error. Please email your intake to deshawn@nomehousestudios.org.');
   }
 });
 
