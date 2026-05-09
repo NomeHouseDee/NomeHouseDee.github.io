@@ -606,14 +606,14 @@
       <div class="field-group" id="field-legal-name">
         <label for="legal_name">Legal / Real Name</label>
         <div class="field-note">Exactly as it appears on government ID. This is how royalty systems identify the songwriter.</div>
-        <input type="text" id="legal_name" name="legal_name" required placeholder="e.g. Breigh Alysse Hammel" />
+        <input type="text" id="legal_name" name="legal_name" required placeholder="e.g. Keaton Louis Martin" />
         <div class="error-msg">Legal name is required.</div>
       </div>
 
       <div class="field-group">
         <label for="stage_names">All Stage Names Used</label>
         <div class="field-note">Every name ever used — including dropped names, older monikers, name changes. Separate with commas. Critical for SoundExchange duplicate detection.</div>
-        <input type="text" id="stage_names" name="stage_names" placeholder="e.g. Breigh, B. Hammel, Breigh Music" />
+        <input type="text" id="stage_names" name="stage_names" placeholder="e.g. DeeJay, Keaton" />
       </div>
 
       <div class="field-group" id="field-territory">
@@ -898,12 +898,6 @@
 
       <div class="upload-block">
         <span class="upload-tag tag-recommended">Recommended</span>
-        <div class="upload-label">Screenshots — MLC Public Work Search, ASCAP Repertoire, SoundExchange Search</div>
-        <div class="upload-desc">Search each song at themlc.com, ascap.com/repertoire (or repertoire.bmi.com), and soundexchange.com. Screenshot all results — including when a song doesn't appear.</div>
-      </div>
-
-      <div class="upload-block">
-        <span class="upload-tag tag-recommended">Recommended</span>
         <div class="upload-label">Signed Split Sheets</div>
         <div class="upload-desc">For any co-written songs. Required to resolve ACRCloud copyright flags. PDF scan or photo is fine.</div>
       </div>
@@ -963,7 +957,7 @@
           <div class="conditional-title">Flag details</div>
           <div class="field-group">
             <label for="flag_songs">Which songs are flagged? What does the flag say?</label>
-            <textarea id="flag_songs" name="copyright_flag_detail" placeholder="e.g. 'talking in your sleep' has a warning icon — copyright issues section shows ACRCloud match"></textarea>
+            <textarea id="flag_songs" name="copyright_flag_detail" placeholder="e.g. 'Flight of the Bumblebees' has a warning icon — copyright issues section shows ACRCloud match"></textarea>
           </div>
         </div>
       </div>
@@ -978,7 +972,7 @@
           <div class="conditional-title">Takedown details</div>
           <div class="field-group">
             <label for="takedown_songs">Which song, which platform, when?</label>
-            <textarea id="takedown_songs" name="takedown_detail" placeholder="e.g. 'all your other girls' was removed from TikTok in March 2026"></textarea>
+            <textarea id="takedown_songs" name="takedown_detail" placeholder="e.g. 'Flight of the Bumblebees' was removed from TikTok in March 2026"></textarea>
           </div>
         </div>
       </div>
@@ -1001,7 +995,7 @@
       <div class="field-group" style="margin-top: 24px;">
         <label for="what_feels_wrong">What specifically feels wrong — in your own words</label>
         <div class="field-note">Describe anything that seems off. Exact numbers, what you expected vs. what you saw, anything you've already tried. This is often the most useful thing in the entire form.</div>
-        <textarea id="what_feels_wrong" name="what_feels_wrong" style="min-height: 120px;" placeholder="e.g. She has 90,000 Spotify streams but the Indiefy dashboard only shows $32.50 with $0 paid earnings. The balance has been sitting there for 11 months. We found a copyright flag on her two highest-streaming songs..."></textarea>
+        <textarea id="what_feels_wrong" name="what_feels_wrong" style="min-height: 120px;" placeholder="e.g. He has 100,000 Spotify streams but the Indiefy dashboard only shows $32.50 with $0 paid earnings. The balance has been sitting there for 11 months. We found a copyright flag on him two highest-streaming songs..."></textarea>
       </div>
 
       <div class="field-group optional">
@@ -1127,7 +1121,7 @@ function addSongCard(initial) {
       <div class="field-group full-width">
         <label for="song_title_${num}">Track Title</label>
         <div class="field-note">Exactly as it appears on the distributor statement.</div>
-        <input type="text" id="song_title_${num}" name="song_${num}_title" placeholder="e.g. talking in your sleep" />
+        <input type="text" id="song_title_${num}" name="song_${num}_title" placeholder="e.g. Flight of the Bumblebees" />
       </div>
 
       <div class="field-group">
@@ -1153,18 +1147,18 @@ function addSongCard(initial) {
       <div class="field-group">
         <label for="song_isrc_${num}">ISRC Code</label>
         <div class="field-note">From distributor dashboard. Looks like USRC12345678.</div>
-        <input type="text" id="song_isrc_${num}" name="song_${num}_isrc" placeholder="e.g. QZDFP2168775" />
+        <input type="text" id="song_isrc_${num}" name="song_${num}_isrc" placeholder="e.g. QZDFP7668775" />
       </div>
 
       <div class="field-group">
         <label for="song_upc_${num}">UPC Code</label>
-        <input type="text" id="song_upc_${num}" name="song_${num}_upc" placeholder="e.g. 7503042820832" />
+        <input type="text" id="song_upc_${num}" name="song_${num}_upc" placeholder="e.g. 7503056828732" />
       </div>
 
       <div class="field-group">
         <label for="song_iswc_${num}">ISWC Code</label>
         <div class="field-note">Found on ASCAP/BMI repertoire search. Looks like T-123456789-0.</div>
-        <input type="text" id="song_iswc_${num}" name="song_${num}_iswc" placeholder="e.g. T3350163218" />
+        <input type="text" id="song_iswc_${num}" name="song_${num}_iswc" placeholder="e.g. T3320157218" />
       </div>
     </div>
 
@@ -1180,11 +1174,11 @@ function addSongCard(initial) {
         <div class="conditional-title">Co-writer details</div>
         <div class="field-group">
           <label for="cowriters_${num}">Co-writer name(s) and their PRO if known</label>
-          <input type="text" id="cowriters_${num}" name="song_${num}_cowriters" placeholder='e.g. Pierre Jerome Regensburger (ASCAP), John Smith (BMI)' />
+          <input type="text" id="cowriters_${num}" name="song_${num}_cowriters" placeholder='e.g. Keaton Martin (ASCAP), John Smith (BMI)' />
         </div>
         <div class="field-group optional">
           <label for="split_${num}">Split percentage (if known)</label>
-          <input type="text" id="split_${num}" name="song_${num}_split" placeholder="e.g. 50/50, or 70% Breigh / 30% Pierre" />
+          <input type="text" id="split_${num}" name="song_${num}_split" placeholder="e.g. 50/50, or 70% Deshawn / 30% DeeJay" />
         </div>
       </div>
     </div>
