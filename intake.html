@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artist Intake — Royalty Audit | YOUR_SERVICE_NAME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:      #0a0a0a;
+      --deep:       #111111;
+      --surface:    #181818;
+      --surface2:   #1f1f1f;
+      --border:     #2a2a2a;
+      --border2:    #363636;
+      --gold:       #c9a84c;
+      --gold-light: #e8c96a;
+      --gold-dim:   rgba(201,168,76,0.12);
+      --white:      #f2f0eb;
+      --muted:      #888884;
+      --muted2:     #5a5a58;
+      --critical:   #d95c3a;
+      --ok:         #4caf7d;
+      --serif:      'DM Serif Display', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .page-header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.96);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .logo span { color: var(--gold); }
+
+    .back-link {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link:hover { color: var(--gold); }
+
+    /* ── PROGRESS BAR ── */
+    #progress-bar {
+      height: 2px;
+      background: var(--border);
+      position: relative;
+    }
+
+    #progress-fill {
+      height: 100%;
+      background: var(--gold);
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 120px;
+    }
+
+    /* ── HERO ── */
+    .form-hero {
+      margin-bottom: 56px;
+    }
+
+    .form-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .form-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .form-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .form-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      max-width: 580px;
+    }
+
+    /* ── TIER BADGE ── */
+    .tier-notice {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tier-notice strong { color: var(--white); }
+
+    .tier-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    /* ── SECTION ── */
+    .form-section {
+      margin-bottom: 56px;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--muted2);
+      flex-shrink: 0;
+    }
+
+    .section-title-text {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+    }
+
+    /* ── FIELD GROUP ── */
+    .field-group {
+      margin-bottom: 20px;
+    }
+
+    .field-group.optional label::after {
+      content: " — optional";
+      color: var(--muted2);
+      font-size: 0.8em;
+      font-weight: 400;
+    }
+
+    .field-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .field-note {
+      font-size: 0.8rem;
+      color: var(--muted2);
+      margin-bottom: 8px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .field-group input,
+    .field-group select,
+    .field-group textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 13px 16px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      border-radius: 2px;
+      appearance: none;
+    }
+
+    .field-group input::placeholder,
+    .field-group textarea::placeholder {
+      color: var(--muted2);
+    }
+
+    .field-group input:focus,
+    .field-group select:focus,
+    .field-group textarea:focus {
+      border-color: var(--gold);
+      background: var(--surface2);
+    }
+
+    .field-group select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888884' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+
+    .field-group select option { background: #1a1a1a; color: var(--white); }
+
+    .field-group textarea { resize: vertical; min-height: 90px; }
+
+    /* ── RADIO / CHECKBOX GROUP ── */
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 9px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--muted);
+      transition: all 0.15s;
+      border-radius: 2px;
+      margin-bottom: 0;
+    }
+
+    .radio-group label:hover,
+    .checkbox-group label:hover { border-color: var(--gold); color: var(--white); }
+
+    .radio-group input[type="radio"],
+    .checkbox-group input[type="checkbox"] { display: none; }
+
+    .radio-group input:checked + span,
+    .checkbox-group input:checked + span { /* styled via label */ }
+
+    .radio-group label:has(input:checked),
+    .checkbox-group label:has(input:checked) {
+      background: var(--gold-dim);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── CONDITIONAL SECTION ── */
+    .conditional {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      padding: 24px;
+      margin-top: 16px;
+      border-radius: 2px;
+    }
+
+    .conditional.visible { display: block; }
+
+    .conditional-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    /* ── SONG CARD ── */
+    .song-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-bottom: 16px;
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .song-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .song-card-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--gold);
+    }
+
+    .song-remove {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted2);
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+
+    .song-remove:hover { border-color: var(--critical); color: var(--critical); }
+
+    .song-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .song-grid { grid-template-columns: 1fr; }
+    }
+
+    .song-grid .full-width { grid-column: 1 / -1; }
+
+    .add-song-btn {
+      width: 100%;
+      background: none;
+      border: 1px dashed var(--border2);
+      color: var(--muted);
+      padding: 16px;
+      font-family: var(--sans);
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 2px;
+    }
+
+    .add-song-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    .add-icon {
+      width: 20px;
+      height: 20px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ── FILE UPLOAD ── */
+    .upload-block {
+      background: var(--surface);
+      border: 1px dashed var(--border2);
+      padding: 20px;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    .upload-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .upload-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .upload-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
+    .tag-required { background: rgba(217,92,58,0.15); color: var(--critical); }
+    .tag-recommended { background: rgba(201,168,76,0.12); color: var(--gold); }
+
+    /* ── DRIVE LINK INPUT ── */
+    .drive-input-block {
+      background: var(--deep);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 2px;
+    }
+
+    .drive-input-block p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .drive-input-block strong { color: var(--white); }
+
+    /* ── PROBLEMS SECTION ── */
+    .problem-field {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 16px;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    .problem-field label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--white);
+      margin-bottom: 10px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    /* ── SUBMIT ── */
+    .submit-section {
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+      margin-top: 48px;
+    }
+
+    .submit-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .submit-btn {
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      padding: 18px 48px;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+      border-radius: 2px;
+    }
+
+    .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .submit-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    /* ── VALIDATION ── */
+    .field-group.error input,
+    .field-group.error select,
+    .field-group.error textarea { border-color: var(--critical); }
+
+    .error-msg {
+      font-size: 0.78rem;
+      color: var(--critical);
+      margin-top: 5px;
+      display: none;
+    }
+
+    .field-group.error .error-msg { display: block; }
+
+    /* ── SUCCESS STATE ── */
+    .success-screen {
+      display: none;
+      text-align: center;
+      padding: 80px 32px;
+    }
+
+    .success-screen.visible { display: block; }
+    .form-wrap.hidden { display: none; }
+
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 1.5rem;
+    }
+
+    .success-title {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .success-sub {
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="logo">YOUR_SERVICE_NAME <span>Audit</span></div>
+  <a href="/" class="back-link">← Back to site</a>
+</header>
+
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- SUCCESS SCREEN -->
+<div class="success-screen" id="success-screen">
+  <div class="success-icon">✓</div>
+  <h1 class="success-title">Received.</h1>
+  <p class="success-sub">Your intake is in. We'll review everything and get back to you within 24 hours with next steps. If you haven't already, create your Google Drive folder and share it with <strong>YOUR_EMAIL</strong>.</p>
+</div>
+
+<!-- MAIN FORM -->
+<div class="page-wrap" id="form-wrap">
+
+  <div class="form-hero">
+    <div class="form-eyebrow">Royalty Audit — Artist Intake</div>
+    <h1 class="form-title">Tell us about <em>this artist.</em></h1>
+    <p class="form-subtitle">Fill this out once per artist. The more you give us, the deeper we can go — but even the minimum gets the investigation started. We'll follow up if we need anything else.</p>
+  </div>
+
+  <div class="tier-notice">
+    <div class="tier-dot"></div>
+    <div><strong>One form per artist.</strong> If you manage a roster, submit this separately for each artist. Fields marked with a red tag are required. Everything else helps us find more — fill in what you have, skip what you don't.</div>
+  </div>
+
+  <form id="intake-form" action="YOUR_FORMSPREE_ENDPOINT" method="POST" novalidate>
+
+    <input type="hidden" name="_subject" value="New Royalty Audit Intake" />
+    <input type="hidden" name="_next" value="https://YOUR_DOMAIN/intake#success" />
+
+    <!-- ──────────────────────────────────────────── -->
+    <!-- SECTION 1: ARTIST IDENTITY -->
+    <!-- ──────────────────────────────────────────── -->
+    <div class="form-section" id="section-1">
+      <div class="section-label">
+        <span class="section-num">01</span>
+        <span class="section-title-text">Artist Identity</span>
+      </div>
+
+      <div class="field-group" id="field-legal-name">
+        <label for="legal_name">Legal / Real Name</label>
+        <div class="field-note">Exactly as it appears on government ID. This is how royalty systems identify the songwriter.</div>
+        <input type="text" id="legal_name" name="legal_name" required placeholder="e.g. Breigh Alysse Hammel" />
+        <div class="error-msg">Legal name is required.</div>
+      </div>
+
+      <div class="field-group">
+        <label for="stage_names">All Stage Names Used</label>
+        <div class="field-note">Every name ever used — including dropped names, older monikers, name changes. Separate with commas. Critical for SoundExchange duplicate detection.</div>
+        <input type="text" id="stage_names" name="stage_names" placeholder="e.g. Breigh, B. Hammel, Breigh Music" />
+      </div>
+
+      <div class="field-group" id="field-territory">
+        <label for="territory">Primary Territory</label>
+        <div class="field-note">Where the artist is based and primarily active. This determines which collection societies we check.</div>
+        <select id="territory" name="territory" required onchange="handleTerritoryChange()">
+          <option value="" disabled selected>Select territory</option>
+          <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="CA">Canada</option>
+          <option value="KR">South Korea</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="IT">Italy</option>
+          <option value="GR">Greece</option>
+          <option value="AU">Australia</option>
+          <option value="JP">Japan</option>
+          <option value="BR">Brazil</option>
+          <option value="SE">Sweden</option>
+          <option value="OTHER">Other</option>
+        </select>
+        <div class="error-msg">Please select a territory.</div>
+      </div>
+
+      <div class="field-group">
+        <label for="email">Artist Contact Email</label>
+        <input type="email" id="email" name="artist_email" placeholder="artist@email.com" />
+      </div>
+
+      <div class="field-group optional">
+        <label for="ipi">IPI / CAE Number</label>
+        <div class="field-note">Found in their ASCAP or BMI member portal under "My Account" or profile settings. 9–11 digits. If they don't know it, that's itself a finding — leave blank.</div>
+        <input type="text" id="ipi" name="ipi_number" placeholder="e.g. 00846315824" />
+      </div>
+
+      <div class="field-group optional">
+        <label for="soundexchange_id">SoundExchange Member ID</label>
+        <div class="field-note">Looks like SE-XXXXXXXX. Found by logging into SoundExchange Direct. Leave blank if unregistered or unknown.</div>
+        <input type="text" id="soundexchange_id" name="soundexchange_id" placeholder="e.g. SE-12345678" />
+      </div>
+    </div>
+
+    <!-- ──────────────────────────────────────────── -->
+    <!-- SECTION 2: DISTRIBUTION & REGISTRATION -->
+    <!-- ──────────────────────────────────────────── -->
+    <div class="form-section" id="section-2">
+      <div class="section-label">
+        <span class="section-num">02</span>
+        <span class="section-title-text">Distribution & Registration</span>
+      </div>
+
+      <div class="field-group" id="field-distributor">
+        <label for="distributor">Primary Distributor</label>
+        <select id="distributor" name="distributor" required>
+          <option value="" disabled selected>Select distributor</option>
+          <option value="distrokid">DistroKid</option>
+          <option value="tunecore">TuneCore</option>
+          <option value="cdbaby">CD Baby</option>
+          <option value="awal">AWAL</option>
+          <option value="empire">Empire</option>
+          <option value="unitedmasters">UnitedMasters</option>
+          <option value="indiefy">Indiefy</option>
+          <option value="kakao">Kakao / Kakao Entertainment</option>
+          <option value="ditto">Ditto Music</option>
+          <option value="onerpm">ONErpm</option>
+          <option value="routenote">RouteNote</option>
+          <option value="symphonic">Symphonic</option>
+          <option value="amuse">Amuse</option>
+          <option value="label">Label deal (not self-distributed)</option>
+          <option value="other">Other — describe below</option>
+        </select>
+        <div class="error-msg">Please select a distributor.</div>
+      </div>
+
+      <div class="field-group optional">
+        <label for="distributor_other">If Other — Distributor Name</label>
+        <input type="text" id="distributor_other" name="distributor_other" placeholder="Distributor name" />
+      </div>
+
+      <div class="field-group">
+        <label>Have they used a different distributor for any song?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="prior_distributor" value="yes" onchange="toggleConditional('prior-dist-detail', this.value === 'yes')"><span>Yes</span></label>
+          <label><input type="radio" name="prior_distributor" value="no" onchange="toggleConditional('prior-dist-detail', false)"><span>No</span></label>
+          <label><input type="radio" name="prior_distributor" value="unsure" onchange="toggleConditional('prior-dist-detail', false)"><span>Not sure</span></label>
+        </div>
+        <div class="conditional" id="prior-dist-detail">
+          <div class="conditional-title">Prior distributor details</div>
+          <div class="field-group">
+            <label for="prior_dist_name">Which distributor and which songs?</label>
+            <textarea id="prior_dist_name" name="prior_distributor_detail" placeholder="e.g. Was on DistroKid 2022–2023 for 'Good Guy' and 'M.I.A.', moved to Indiefy mid-2024"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <div class="field-group">
+        <label>Are they registered with a PRO?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="pro_registered" value="yes" onchange="handleProRegistration('yes')"><span>Yes</span></label>
+          <label><input type="radio" name="pro_registered" value="no" onchange="handleProRegistration('no')"><span>No</span></label>
+          <label><input type="radio" name="pro_registered" value="unsure" onchange="handleProRegistration('unsure')"><span>Not sure</span></label>
+        </div>
+
+        <div class="conditional" id="pro-detail">
+          <div class="conditional-title">PRO details</div>
+          <div class="field-group">
+            <label for="which_pro">Which PRO?</label>
+            <select id="which_pro" name="which_pro">
+              <option value="">Select PRO</option>
+              <option>ASCAP</option>
+              <option>BMI</option>
+              <option>SESAC</option>
+              <option>GMR</option>
+              <option>PRS for Music (UK)</option>
+              <option>SOCAN (Canada)</option>
+              <option>KOMCA (Korea)</option>
+              <option>GEMA (Germany)</option>
+              <option>SACEM (France)</option>
+              <option>SIAE (Italy)</option>
+              <option>AUTODIA (Greece)</option>
+              <option>APRA AMCOS (Australia)</option>
+              <option>JASRAC (Japan)</option>
+              <option>ECAD (Brazil)</option>
+              <option>STIM (Sweden)</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field-group optional">
+            <label for="pro_join_date">Date they joined (check confirmation email or member portal)</label>
+            <input type="date" id="pro_join_date" name="pro_join_date" />
+          </div>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Are they registered with The MLC? (US mechanical royalties)</label>
+        <div class="field-note">Required for any US artist with interactive streaming. Separate from ASCAP/BMI.</div>
+        <div class="radio-group">
+          <label><input type="radio" name="mlc_registered" value="yes" onchange="toggleConditional('mlc-date', this.value === 'yes')"><span>Yes</span></label>
+          <label><input type="radio" name="mlc_registered" value="no" onchange="toggleConditional('mlc-date', false)"><span>No</span></label>
+          <label><input type="radio" name="mlc_registered" value="unsure" onchange="toggleConditional('mlc-date', false)"><span>Not sure</span></label>
+        </div>
+        <div class="conditional" id="mlc-date">
+          <div class="conditional-title">MLC registration date</div>
+          <div class="field-group optional">
+            <label for="mlc_date">Date registered with The MLC (check themlc.com member hub)</label>
+            <input type="date" id="mlc_date" name="mlc_registered_date" />
+          </div>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Are they registered with SoundExchange? (non-interactive digital streaming)</label>
+        <div class="radio-group">
+          <label><input type="radio" name="soundexchange_registered" value="yes"><span>Yes</span></label>
+          <label><input type="radio" name="soundexchange_registered" value="no"><span>No</span></label>
+          <label><input type="radio" name="soundexchange_registered" value="unsure"><span>Not sure</span></label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Do they use a publishing administrator?</label>
+        <div class="field-note">Songtrust, TuneCore Publishing, CD Baby Pro, DistroKid Publishing add-on, etc. This is different from their PRO membership.</div>
+        <div class="radio-group">
+          <label><input type="radio" name="publishing_admin" value="yes" onchange="toggleConditional('pub-admin-detail', this.value === 'yes')"><span>Yes</span></label>
+          <label><input type="radio" name="publishing_admin" value="no" onchange="toggleConditional('pub-admin-detail', false)"><span>No</span></label>
+          <label><input type="radio" name="publishing_admin" value="unsure" onchange="toggleConditional('pub-admin-detail', false)"><span>Not sure</span></label>
+        </div>
+        <div class="conditional" id="pub-admin-detail">
+          <div class="conditional-title">Publishing admin details</div>
+          <div class="field-group">
+            <label for="pub_admin_name">Which service?</label>
+            <select id="pub_admin_name" name="publishing_admin_name">
+              <option value="">Select</option>
+              <option>Songtrust</option>
+              <option>TuneCore Publishing</option>
+              <option>CD Baby Pro</option>
+              <option>DistroKid Publishing Add-on</option>
+              <option>Music Gateway</option>
+              <option>Other — specify in notes</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Deal type</label>
+        <div class="radio-group">
+          <label><input type="radio" name="deal_type" value="indie"><span>Fully independent</span></label>
+          <label><input type="radio" name="deal_type" value="label"><span>Label deal</span></label>
+          <label><input type="radio" name="deal_type" value="recoupment"><span>Label deal with recoupment</span></label>
+          <label><input type="radio" name="deal_type" value="360"><span>360 deal</span></label>
+          <label><input type="radio" name="deal_type" value="former_label"><span>Was on label — now independent</span></label>
+        </div>
+      </div>
+
+      <!-- Territory-specific conditional questions -->
+      <div class="conditional" id="territory-specific">
+        <div class="conditional-title" id="territory-specific-title">Territory-Specific Registrations</div>
+        <div id="territory-specific-fields"></div>
+      </div>
+
+    </div>
+
+    <!-- ──────────────────────────────────────────── -->
+    <!-- SECTION 3: SONGS / RELEASES -->
+    <!-- ──────────────────────────────────────────── -->
+    <div class="form-section" id="section-3">
+      <div class="section-label">
+        <span class="section-num">03</span>
+        <span class="section-title-text">Releases</span>
+      </div>
+
+      <div class="tier-notice" style="margin-bottom: 24px;">
+        <div class="tier-dot"></div>
+        <div>Add one block per song or version with a separate ISRC. If a song has a remix with its own ISRC, that remix gets its own block. Add as many as you need.</div>
+      </div>
+
+      <div id="songs-container">
+        <!-- First song card is always present -->
+      </div>
+
+      <button type="button" class="add-song-btn" onclick="addSongCard()">
+        <span class="add-icon">+</span>
+        Add Another Song
+      </button>
+    </div>
+
+    <!-- ──────────────────────────────────────────── -->
+    <!-- SECTION 4: FILES & STATEMENTS -->
+    <!-- ──────────────────────────────────────────── -->
+    <div class="form-section" id="section-4">
+      <div class="section-label">
+        <span class="section-num">04</span>
+        <span class="section-title-text">Files & Statements</span>
+      </div>
+
+      <div class="tier-notice" style="margin-bottom: 24px;">
+        <div class="tier-dot"></div>
+        <div><strong>Don't upload files here.</strong> Create a Google Drive folder named "<em>[Artist Name] — Royalty Audit</em>", drop everything in it, share it with <strong>YOUR_EMAIL</strong>, and paste the link below. Add files as you collect them — you don't need everything before submitting.</div>
+      </div>
+
+      <!-- Required -->
+      <div class="upload-block">
+        <span class="upload-tag tag-required">Required</span>
+        <div class="upload-label">Distributor Royalty Statement (CSV or PDF)</div>
+        <div class="upload-desc">Export from your distributor: Earnings → All Time → Download. Include every available month. DistroKid users: "SEE EXCRUCIATING DETAIL" → choose a month → download TSV.</div>
+      </div>
+
+      <div class="upload-block">
+        <span class="upload-tag tag-required">Required</span>
+        <div class="upload-label">Screenshot — Distributor Dashboard Overview</div>
+        <div class="upload-desc">The main earnings/royalties page showing: Balance, Pending Earnings, Paid Earnings, and the full earnings history table. This documents the payment state.</div>
+      </div>
+
+      <!-- Recommended -->
+      <div class="upload-block">
+        <span class="upload-tag tag-recommended">Recommended</span>
+        <div class="upload-label">Screenshot — Each Release Detail Page</div>
+        <div class="upload-desc">Click into each release in your distributor and screenshot the page. We need to see any warning icons, copyright flags, or ACRCloud notices.</div>
+      </div>
+
+      <div class="upload-block">
+        <span class="upload-tag tag-recommended">Recommended</span>
+        <div class="upload-label">PRO Royalty Statements (ASCAP, BMI, etc.)</div>
+        <div class="upload-desc">My Account → Statements → Download. Last 8 quarters as PDF or Excel. ASCAP: electronic download available. BMI: Excel export available.</div>
+      </div>
+
+      <div class="upload-block">
+        <span class="upload-tag tag-recommended">Recommended</span>
+        <div class="upload-label">MLC Royalty Statements</div>
+        <div class="upload-desc">Log into themlc.com → Member Hub → Royalty Statements → Download CSV for each available month.</div>
+      </div>
+
+      <div class="upload-block">
+        <span class="upload-tag tag-recommended">Recommended</span>
+        <div class="upload-label">Songtrust or Publishing Admin CSV</div>
+        <div class="upload-desc">If using Songtrust, TuneCore Publishing, or similar: log in and export the all-data CSV from the Statements or Royalties section.</div>
+      </div>
+
+      <div class="upload-block">
+        <span class="upload-tag tag-recommended">Recommended</span>
+        <div class="upload-label">Screenshots — MLC Public Work Search, ASCAP Repertoire, SoundExchange Search</div>
+        <div class="upload-desc">Search each song at themlc.com, ascap.com/repertoire (or repertoire.bmi.com), and soundexchange.com. Screenshot all results — including when a song doesn't appear.</div>
+      </div>
+
+      <div class="upload-block">
+        <span class="upload-tag tag-recommended">Recommended</span>
+        <div class="upload-label">Signed Split Sheets</div>
+        <div class="upload-desc">For any co-written songs. Required to resolve ACRCloud copyright flags. PDF scan or photo is fine.</div>
+      </div>
+
+      <div class="upload-block" style="border-color: var(--border);">
+        <span class="upload-tag" style="background: rgba(255,255,255,0.06); color: var(--muted);">If Applicable</span>
+        <div class="upload-label">Label Deal Contract or Rate Clause</div>
+        <div class="upload-desc">Only if they have a label deal with a specific per-stream rate. Just the relevant clause is fine — we don't need the full contract.</div>
+      </div>
+
+      <div class="drive-input-block">
+        <p>Once your folder is ready and shared with <strong>YOUR_EMAIL</strong>, paste the link here. You can submit now and share the link separately by email if you prefer.</p>
+        <div class="field-group optional">
+          <label for="drive_link">Google Drive Folder Link</label>
+          <input type="url" id="drive_link" name="drive_folder_link" placeholder="https://drive.google.com/drive/folders/..." />
+        </div>
+      </div>
+    </div>
+
+    <!-- ──────────────────────────────────────────── -->
+    <!-- SECTION 5: CURRENT PROBLEMS -->
+    <!-- ──────────────────────────────────────────── -->
+    <div class="form-section" id="section-5">
+      <div class="section-label">
+        <span class="section-num">05</span>
+        <span class="section-title-text">What Feels Wrong</span>
+      </div>
+
+      <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.7;">Answer what you know. These quick answers often point us directly to the problem before we've opened a single file.</p>
+
+      <div class="problem-field">
+        <label>Has this artist ever received a royalty payment from their distributor to their bank account?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="ever_paid" value="yes"><span>Yes</span></label>
+          <label><input type="radio" name="ever_paid" value="no"><span>No — never</span></label>
+          <label><input type="radio" name="ever_paid" value="unsure"><span>Not sure</span></label>
+        </div>
+      </div>
+
+      <div class="problem-field">
+        <label>Is there a balance in the distributor dashboard that has never been paid out?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="unpaid_balance" value="yes"><span>Yes</span></label>
+          <label><input type="radio" name="unpaid_balance" value="no"><span>No</span></label>
+          <label><input type="radio" name="unpaid_balance" value="unsure"><span>Not sure</span></label>
+        </div>
+      </div>
+
+      <div class="problem-field">
+        <label>Are any songs showing a warning icon, copyright flag, or dispute notice in the distributor dashboard?</label>
+        <div class="radio-group" style="margin-bottom: 12px;">
+          <label><input type="radio" name="copyright_flag" value="yes" onchange="toggleConditional('flag-detail', this.value === 'yes')"><span>Yes</span></label>
+          <label><input type="radio" name="copyright_flag" value="no" onchange="toggleConditional('flag-detail', false)"><span>No</span></label>
+          <label><input type="radio" name="copyright_flag" value="unsure" onchange="toggleConditional('flag-detail', false)"><span>Not sure</span></label>
+        </div>
+        <div class="conditional" id="flag-detail">
+          <div class="conditional-title">Flag details</div>
+          <div class="field-group">
+            <label for="flag_songs">Which songs are flagged? What does the flag say?</label>
+            <textarea id="flag_songs" name="copyright_flag_detail" placeholder="e.g. 'talking in your sleep' has a warning icon — copyright issues section shows ACRCloud match"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-field">
+        <label>Have any songs been taken down from any platform?</label>
+        <div class="radio-group" style="margin-bottom: 12px;">
+          <label><input type="radio" name="takedowns" value="yes" onchange="toggleConditional('takedown-detail', this.value === 'yes')"><span>Yes</span></label>
+          <label><input type="radio" name="takedowns" value="no" onchange="toggleConditional('takedown-detail', false)"><span>No</span></label>
+        </div>
+        <div class="conditional" id="takedown-detail">
+          <div class="conditional-title">Takedown details</div>
+          <div class="field-group">
+            <label for="takedown_songs">Which song, which platform, when?</label>
+            <textarea id="takedown_songs" name="takedown_detail" placeholder="e.g. 'all your other girls' was removed from TikTok in March 2026"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-field">
+        <label>Has this artist ever switched distributors?</label>
+        <div class="radio-group" style="margin-bottom: 12px;">
+          <label><input type="radio" name="switched_dist" value="yes" onchange="toggleConditional('switched-detail', this.value === 'yes')"><span>Yes</span></label>
+          <label><input type="radio" name="switched_dist" value="no" onchange="toggleConditional('switched-detail', false)"><span>No</span></label>
+        </div>
+        <div class="conditional" id="switched-detail">
+          <div class="conditional-title">Switch details</div>
+          <div class="field-group">
+            <label for="switch_info">Previous distributor, current distributor, and when?</label>
+            <textarea id="switch_info" name="distributor_switch_detail" placeholder="e.g. Was on DistroKid until 2023, moved to Indiefy. Older songs still on DistroKid."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-group" style="margin-top: 24px;">
+        <label for="what_feels_wrong">What specifically feels wrong — in your own words</label>
+        <div class="field-note">Describe anything that seems off. Exact numbers, what you expected vs. what you saw, anything you've already tried. This is often the most useful thing in the entire form.</div>
+        <textarea id="what_feels_wrong" name="what_feels_wrong" style="min-height: 120px;" placeholder="e.g. She has 90,000 Spotify streams but the Indiefy dashboard only shows $32.50 with $0 paid earnings. The balance has been sitting there for 11 months. We found a copyright flag on her two highest-streaming songs..."></textarea>
+      </div>
+
+      <div class="field-group optional">
+        <label for="additional_notes">Anything else we should know</label>
+        <textarea id="additional_notes" name="additional_notes" placeholder="Label deal history, prior disputes, manager details, anything relevant to the audit..."></textarea>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-section">
+      <p class="submit-note">We'll review everything and get back within 24 hours. If you have more information to share after submitting — files, additional songs, anything — just email it to <strong>YOUR_EMAIL</strong>.</p>
+      <button type="submit" class="submit-btn" id="submit-btn">Submit Intake →</button>
+    </div>
+
+  </form>
+</div>
+
+<script>
+// ── TERRITORY-SPECIFIC QUESTIONS ─────────────────────
+const territoryQuestions = {
+  UK: [
+    { name: 'prs_registered', label: 'Registered with PRS for Music?', type: 'yesno' },
+    { name: 'prs_date', label: 'PRS join date', type: 'date', conditional_on: 'prs_registered' },
+    { name: 'ppl_registered', label: 'Registered with PPL (neighboring rights)?', type: 'yesno' },
+    { name: 'ppl_date', label: 'PPL join date', type: 'date', conditional_on: 'ppl_registered' },
+  ],
+  CA: [
+    { name: 'socan_registered', label: 'Registered with SOCAN?', type: 'yesno' },
+    { name: 'socan_date', label: 'SOCAN join date', type: 'date', conditional_on: 'socan_registered' },
+    { name: 'resound_registered', label: 'Registered with Re:Sound?', type: 'yesno' },
+    { name: 'cmrra_registered', label: 'Registered with CMRRA (mechanical)?', type: 'yesno' },
+  ],
+  KR: [
+    { name: 'komca_registered', label: 'Registered with KOMCA?', type: 'yesno' },
+    { name: 'komca_date', label: 'KOMCA join date', type: 'date', conditional_on: 'komca_registered' },
+    { name: 'fkmp_registered', label: 'Registered with FKMP (neighboring rights)?', type: 'yesno' },
+  ],
+  DE: [
+    { name: 'gema_registered', label: 'Registered with GEMA?', type: 'yesno' },
+    { name: 'gema_date', label: 'GEMA join date', type: 'date', conditional_on: 'gema_registered' },
+    { name: 'gvl_registered', label: 'Registered with GVL (neighboring rights)?', type: 'yesno' },
+  ],
+  FR: [
+    { name: 'sacem_registered', label: 'Registered with SACEM?', type: 'yesno' },
+    { name: 'sacem_date', label: 'SACEM join date', type: 'date', conditional_on: 'sacem_registered' },
+    { name: 'adami_registered', label: 'Registered with ADAMI (neighboring rights)?', type: 'yesno' },
+  ],
+  IT: [{ name: 'siae_registered', label: 'Registered with SIAE?', type: 'yesno' }, { name: 'siae_date', label: 'SIAE join date', type: 'date', conditional_on: 'siae_registered' }],
+  GR: [{ name: 'autodia_registered', label: 'Registered with AUTODIA?', type: 'yesno' }, { name: 'gea_registered', label: 'Registered with GEA?', type: 'yesno' }],
+  AU: [{ name: 'apra_registered', label: 'Registered with APRA AMCOS?', type: 'yesno' }, { name: 'apra_date', label: 'APRA AMCOS join date', type: 'date', conditional_on: 'apra_registered' }],
+  JP: [{ name: 'jasrac_registered', label: 'Registered with JASRAC?', type: 'yesno' }, { name: 'nextone_registered', label: 'Registered with NexTone?', type: 'yesno' }],
+  BR: [{ name: 'ecad_registered', label: 'Registered with ECAD?', type: 'yesno' }],
+  SE: [{ name: 'stim_registered', label: 'Registered with STIM?', type: 'yesno' }, { name: 'stim_date', label: 'STIM join date', type: 'date', conditional_on: 'stim_registered' }],
+};
+
+function handleTerritoryChange() {
+  const val = document.getElementById('territory').value;
+  const container = document.getElementById('territory-specific');
+  const fieldsDiv = document.getElementById('territory-specific-fields');
+  const titleEl = document.getElementById('territory-specific-title');
+
+  if (!territoryQuestions[val]) {
+    container.classList.remove('visible');
+    return;
+  }
+
+  const questions = territoryQuestions[val];
+  const titles = { UK:'United Kingdom', CA:'Canada', KR:'South Korea', DE:'Germany', FR:'France', IT:'Italy', GR:'Greece', AU:'Australia', JP:'Japan', BR:'Brazil', SE:'Sweden' };
+  titleEl.textContent = (titles[val] || val) + ' — Additional Registrations';
+
+  let html = '';
+  questions.forEach(q => {
+    if (q.type === 'yesno') {
+      html += `<div class="field-group" style="margin-bottom:14px;">
+        <label>${q.label}</label>
+        <div class="radio-group">
+          <label><input type="radio" name="${q.name}" value="yes"><span>Yes</span></label>
+          <label><input type="radio" name="${q.name}" value="no"><span>No</span></label>
+          <label><input type="radio" name="${q.name}" value="unsure"><span>Not sure</span></label>
+        </div>
+      </div>`;
+    } else if (q.type === 'date') {
+      html += `<div class="field-group optional" style="margin-bottom:14px;">
+        <label for="${q.name}">${q.label}</label>
+        <input type="date" id="${q.name}" name="${q.name}" />
+      </div>`;
+    }
+  });
+
+  fieldsDiv.innerHTML = html;
+  container.classList.add('visible');
+}
+
+function handleProRegistration(val) {
+  toggleConditional('pro-detail', val === 'yes');
+}
+
+function toggleConditional(id, show) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (show) el.classList.add('visible');
+  else el.classList.remove('visible');
+}
+
+// ── SONG CARDS ────────────────────────────────────────
+let songCount = 0;
+
+function addSongCard(initial) {
+  songCount++;
+  const num = songCount;
+  const container = document.getElementById('songs-container');
+  const card = document.createElement('div');
+  card.className = 'song-card';
+  card.id = `song-${num}`;
+
+  card.innerHTML = `
+    <div class="song-card-header">
+      <span class="song-card-title">Song ${num}</span>
+      ${num > 1 ? `<button type="button" class="song-remove" onclick="removeSong(${num})">Remove</button>` : ''}
+    </div>
+
+    <div class="song-grid">
+      <div class="field-group full-width">
+        <label for="song_title_${num}">Track Title</label>
+        <div class="field-note">Exactly as it appears on the distributor statement.</div>
+        <input type="text" id="song_title_${num}" name="song_${num}_title" placeholder="e.g. talking in your sleep" />
+      </div>
+
+      <div class="field-group">
+        <label for="song_release_${num}">Release Date</label>
+        <input type="date" id="song_release_${num}" name="song_${num}_release_date" />
+      </div>
+
+      <div class="field-group">
+        <label for="song_dist_${num}">Distributor for This Song</label>
+        <select id="song_dist_${num}" name="song_${num}_distributor">
+          <option value="">Same as primary</option>
+          <option value="distrokid">DistroKid</option>
+          <option value="tunecore">TuneCore</option>
+          <option value="cdbaby">CD Baby</option>
+          <option value="awal">AWAL</option>
+          <option value="indiefy">Indiefy</option>
+          <option value="unitedmasters">UnitedMasters</option>
+          <option value="label">Label</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="song_isrc_${num}">ISRC Code</label>
+        <div class="field-note">From distributor dashboard. Looks like USRC12345678.</div>
+        <input type="text" id="song_isrc_${num}" name="song_${num}_isrc" placeholder="e.g. QZDFP2168775" />
+      </div>
+
+      <div class="field-group">
+        <label for="song_upc_${num}">UPC Code</label>
+        <input type="text" id="song_upc_${num}" name="song_${num}_upc" placeholder="e.g. 7503042820832" />
+      </div>
+
+      <div class="field-group">
+        <label for="song_iswc_${num}">ISWC Code</label>
+        <div class="field-note">Found on ASCAP/BMI repertoire search. Looks like T-123456789-0.</div>
+        <input type="text" id="song_iswc_${num}" name="song_${num}_iswc" placeholder="e.g. T3350163218" />
+      </div>
+    </div>
+
+    <hr class="section-divider" style="margin: 20px 0;" />
+
+    <div class="field-group">
+      <label>Are there co-writers on this song?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="song_${num}_cowritten" value="yes" onchange="toggleConditional('cowriter-${num}', true)"><span>Yes</span></label>
+        <label><input type="radio" name="song_${num}_cowritten" value="no" onchange="toggleConditional('cowriter-${num}', false)"><span>No — sole writer</span></label>
+      </div>
+      <div class="conditional" id="cowriter-${num}">
+        <div class="conditional-title">Co-writer details</div>
+        <div class="field-group">
+          <label for="cowriters_${num}">Co-writer name(s) and their PRO if known</label>
+          <input type="text" id="cowriters_${num}" name="song_${num}_cowriters" placeholder='e.g. Pierre Jerome Regensburger (ASCAP), John Smith (BMI)' />
+        </div>
+        <div class="field-group optional">
+          <label for="split_${num}">Split percentage (if known)</label>
+          <input type="text" id="split_${num}" name="song_${num}_split" placeholder="e.g. 50/50, or 70% Breigh / 30% Pierre" />
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Does this song have a label deal with a specific per-stream rate?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="song_${num}_label_deal" value="yes" onchange="toggleConditional('contract-rate-${num}', true)"><span>Yes</span></label>
+        <label><input type="radio" name="song_${num}_label_deal" value="no" onchange="toggleConditional('contract-rate-${num}', false)"><span>No</span></label>
+      </div>
+      <div class="conditional" id="contract-rate-${num}">
+        <div class="conditional-title">Contract rate details</div>
+        <div class="field-group">
+          <label for="contract_rate_${num}">Per-stream rate in the contract</label>
+          <input type="text" id="contract_rate_${num}" name="song_${num}_contract_rate" placeholder="e.g. 0.0065 (meaning $0.0065 per stream)" />
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Any known copyright flags, Content ID claims, or disputes on this song?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="song_${num}_flag" value="yes" onchange="toggleConditional('song-flag-${num}', true)"><span>Yes</span></label>
+        <label><input type="radio" name="song_${num}_flag" value="no" onchange="toggleConditional('song-flag-${num}', false)"><span>No</span></label>
+        <label><input type="radio" name="song_${num}_flag" value="unsure" onchange="toggleConditional('song-flag-${num}', false)"><span>Not sure</span></label>
+      </div>
+      <div class="conditional" id="song-flag-${num}">
+        <div class="conditional-title">Flag / dispute details</div>
+        <div class="field-group">
+          <label for="flag_detail_${num}">Describe what you know</label>
+          <textarea id="flag_detail_${num}" name="song_${num}_flag_detail" placeholder="e.g. ACRCloud flag showing a match to an Indian folk song. Distributor shows $0 payment for this song."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group optional">
+      <label for="song_notes_${num}">Any other notes about this specific song</label>
+      <textarea id="song_notes_${num}" name="song_${num}_notes" placeholder="Anything unusual about how this song was released, registered, or paid..."></textarea>
+    </div>
+  `;
+
+  container.appendChild(card);
+  updateSongTitles();
+  updateProgress();
+}
+
+function removeSong(num) {
+  const card = document.getElementById(`song-${num}`);
+  if (card) card.remove();
+  updateSongTitles();
+}
+
+function updateSongTitles() {
+  const cards = document.querySelectorAll('.song-card');
+  cards.forEach((card, i) => {
+    const titleEl = card.querySelector('.song-card-title');
+    if (titleEl) titleEl.textContent = `Song ${i + 1}`;
+  });
+}
+
+// ── PROGRESS ─────────────────────────────────────────
+function updateProgress() {
+  const required = document.querySelectorAll('[required]');
+  const filled = Array.from(required).filter(el => el.value.trim() !== '');
+  const pct = required.length === 0 ? 0 : Math.round((filled.length / required.length) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+document.addEventListener('input', updateProgress);
+document.addEventListener('change', updateProgress);
+
+// ── FORM SUBMIT ───────────────────────────────────────
+document.getElementById('intake-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  // Basic validation
+  let valid = true;
+  this.querySelectorAll('[required]').forEach(field => {
+    const group = field.closest('.field-group');
+    if (!field.value.trim()) {
+      valid = false;
+      if (group) group.classList.add('error');
+    } else {
+      if (group) group.classList.remove('error');
+    }
+  });
+
+  if (!valid) {
+    const firstError = this.querySelector('.field-group.error');
+    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
+  try {
+    const formData = new FormData(this);
+    const response = await fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.getElementById('form-wrap').classList.add('hidden');
+      document.getElementById('success-screen').classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Submit Intake →';
+      alert('There was an issue submitting. Please email your intake directly to YOUR_EMAIL.');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Submit Intake →';
+    alert('Network error. Please email your intake to YOUR_EMAIL.');
+  }
+});
+
+// ── INITIALIZE ────────────────────────────────────────
+addSongCard(true); // First song always present
+updateProgress();
+</script>
+
+</body>
+</html>
