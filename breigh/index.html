@@ -45,40 +45,40 @@
          belong in a public repo. (If you ever want a form, use a service
          like Formspree the way the main site does, and never commit API
          keys or passwords to the repo.)
-       - Everything in this repo is PUBLIC. No phone numbers, home
+       - Everything in this repo is PUBLIC. No ph numbers, home
          addresses, unreleased tracklists, or contracts.
 
      DESIGN SYSTEM — how to add flair WITHOUT breaking it or making it
      look like a template:
        The whole look is controlled by the CSS variables in :root below.
-       The discipline that keeps this page professional is ONE ISOLATION
+       The discipline that keeps this page professional is  ISOLATION
        TACTIC: a single accent color doing all the attention work while
        everything else stays muted. So when matching the page to an
-       artist's world, change ONE OR TWO knobs, not five:
+       artist's world, change  OR TWO knobs, not five:
 
        KNOB 1 — the accent (--accent / --accent-soft). This is the fastest
          way to re-skin per artist. Pull it from the release artwork:
          moody electronic -> deep violet #4A3D6B; garage/punk -> oxblood
-         #7A2E2E; folk -> moss #5A6B3D; pop -> keep it saturated but ONE
+         #7A2E2E; folk -> moss #5A6B3D; pop -> keep it saturated but 
          hue. Check contrast on the paper background (aim for WCAG AA:
          https://webaim.org/resources/contrastchecker/).
        KNOB 2 — the paper (--paper / --paper-deep / --ink). Stay in the
-         soft, low-glare zone — that calm is deliberate (a relief zone in
+         soft, low-glare z — that calm is deliberate (a relief z in
          design terms; it makes the music and photos hit harder). If the
          artist's world is dark, invert carefully: --paper #1C1D1A,
          --ink #E8E7E1, and SOFTEN the accent (never neon on black — that
          harsh look is exactly what this design avoids).
-       KNOB 3 — the typeface. One variable family with weight jumps does
+       KNOB 3 — the typeface.  variable family with weight jumps does
          the hierarchy work (400 body / 500 labels / 800 display), which
          is why nothing here needs a second font. To swap: change the
          Google Fonts <link> href below AND --font. Pick something with
          genuine character in the artist's direction (grotesque = modern,
          serif = literary/roots, mono = electronic) — then leave the
-         weights alone. Two fonts max, ever.
-       DO NOT: add gradients, drop shadows, more than one accent color,
+         weights al. Two fonts max, ever.
+       DO NOT: add gradients, drop shadows, more than  accent color,
          center-align the body text, or install an animation library.
-         Restraint is the personality. If you add one flourish (say, a
-         textured hero background for a lo-fi artist), remove one
+         Restraint is the personality. If you add  flourish (say, a
+         textured hero background for a lo-fi artist), remove 
          elsewhere.
 
      ADDING A NEW SECTION: copy the SECTION TEMPLATE in the comment near
@@ -95,14 +95,14 @@
   <title>Breigh — Press Kit | Synth-Pop, New York, United States</title>
   <meta name="description" content="Electronic press kit for Breigh — Synth-Pop from New York, United States. Music, bio, press photos, and contact for press and media." />
   <!-- SEO NOTE: unlike the main dmjsync.com site, this page is NOT built
-       to rank. It's built to be scanned in 60 seconds by someone who
+       to rank. It's built to be scanned in 60 seconds by some who
        already clicked a pitch email. Do not add keyword blocks, FAQ
        schema, or wordy sections here — that works against its job.
        If you'd rather editors not stumble on it via Google at all,
        uncomment the next line: -->
   <!-- <meta name="robots" content="noindex" /> -->
 
-  <!-- FONT: one variable family, three weights. To swap the typeface,
+  <!-- FONT:  variable family, three weights. To swap the typeface,
        replace this href (fonts.google.com -> pick family -> get embed
        code) AND the --font variable below. Nothing else needs to change. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -349,7 +349,7 @@
        ============================================================ -->
   <section id="listen">
     <p class="marker">Listen</p>
-<div class="track"><p class="track-label">Newest Single — &#x27;One The Table&#x27;, 2026</p>
+<div class="track"><p class="track-label">Newest Single — &#x27;On The Table&#x27;, 2026</p>
 <iframe title="Spotify player" class="player" src="https://open.spotify.com/embed/track/2gBb6NjRGYoinOnEGYh6oR" width="100%" height="152" frameborder="0" loading="lazy" allow="encrypted-media; fullscreen" style="border-radius:var(--frame-radius)"></iframe></div>
 <div class="track"><p class="track-label">Top Streamed — &#x27;Talking in Your Sleep&#x27;, 2025</p>
 <iframe title="YouTube video"
@@ -393,12 +393,7 @@
        Keep it to 4 max — a wall of numbers reads as compensating.
        If a number stops being true, delete it the same day.
        ============================================================ -->
-  <section id="proof">
-    <p class="marker">In numbers</p>
-    <div class="stat-row">
-      <div class="stat"><span class="stat-value">600 people active daily</span><span class="stat-label">Members in &#x27;Slayers&#x27; fan-group chat</span></div>
-    </div>
-  </section>
+  
 
   <!-- ============================================================
        SECTION: PRESS PHOTOS
