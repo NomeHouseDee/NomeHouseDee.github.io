@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://nomehousestudios.org/analytics" />
+
+  <title>DMJ Sync Analytics | Export & Share Your Instagram, TikTok and YouTube Performance Data</title>
+  <meta name="description" content="DMJ Sync Analytics lets independent musicians export their own Instagram, TikTok, and YouTube performance data as spreadsheets or a one-page PDF, and share it with managers, labels, and brand partners through a read-only link." />
+  <meta name="keywords" content="artist analytics tool, export instagram insights, tiktok analytics export, youtube analytics export, artist performance report, share analytics with manager, brand partnership reporting" />
+
+  <meta property="og:title" content="DMJ Sync Analytics | Performance Reporting for Independent Artists" />
+  <meta property="og:description" content="Export your Instagram, TikTok, and YouTube performance data and share it with your manager, label, or brand partner in one click." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nomehousestudios.org/analytics" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DMJ Sync Analytics",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://nomehousestudios.org/analytics",
+    "description": "A web application that lets independent musicians export their own Instagram, TikTok, and YouTube performance data as CSV files or a one-page PDF report, and share those reports with managers, record labels, and brand partners through read-only links.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nome House Studios",
+      "url": "https://nomehousestudios.org",
+      "email": "deshawn@nomehousestudios.org"
+    },
+    "featureList": [
+      "Export Instagram post performance data as CSV",
+      "Export TikTok video performance data as CSV",
+      "Export YouTube video analytics including retention and traffic sources",
+      "Generate a one-page PDF performance report",
+      "Share read-only reports via expiring links",
+      "Configurable date ranges per export"
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --deep: #111111; --surface: #181818; --border: #2a2a2a;
+      --gold: #c9a84c; --gold-light: #e8c96a; --white: #f2f0eb; --muted: #888884;
+      --critical: #d95c3a; --good: #6aab7d;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --max: 1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--serif); font-size: 1.05rem; color: var(--white); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 24px; align-items: center; font-size: 0.875rem; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--black) !important; padding: 10px 22px; font-weight: 600; font-size: 0.875rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    .hero { padding: 170px 24px 80px; max-width: var(--max); margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    .hero-headline { font-family: var(--serif); font-size: clamp(2.3rem, 4.6vw, 3.7rem); line-height: 1.14; max-width: 840px; margin-bottom: 26px; }
+    .hero-headline em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1.08rem; color: var(--muted); max-width: 630px; margin-bottom: 42px; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { background: var(--gold); color: var(--black); padding: 16px 36px; font-weight: 600; font-size: 0.95rem; display: inline-block; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--gold-light); color: var(--black); transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid var(--border); color: var(--muted); padding: 16px 36px; font-size: 0.95rem; display: inline-block; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    .section { padding: 88px 24px; }
+    .dark-section { background: var(--deep); }
+    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.7rem, 3.4vw, 2.6rem); line-height: 1.2; margin-bottom: 20px; max-width: 760px; }
+    .section-body { color: var(--muted); max-width: 640px; margin-bottom: 50px; line-height: 1.75; }
+
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 44px; max-width: 940px; }
+    .step-num { font-family: var(--serif); font-size: 3.4rem; color: var(--border); line-height: 1; margin-bottom: 14px; }
+    .step h3 { font-family: var(--serif); font-size: 1.18rem; margin-bottom: 12px; }
+    .step p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .platform { background: var(--surface); padding: 36px; }
+    .platform h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 14px; color: var(--gold); }
+    .platform ul { list-style: none; }
+    .platform li { font-size: 0.87rem; color: var(--muted); padding: 5px 0 5px 18px; position: relative; line-height: 1.6; }
+    .platform li::before { content: '—'; position: absolute; left: 0; color: var(--border); }
+
+    .privacy-block { background: var(--surface); border-left: 4px solid var(--good); padding: 40px 44px; max-width: 880px; }
+    .privacy-block h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 18px; }
+    .privacy-list { list-style: none; }
+    .privacy-list li { font-size: 0.9rem; color: var(--muted); padding: 8px 0 8px 30px; position: relative; line-height: 1.65; }
+    .privacy-list li::before { content: '✕'; position: absolute; left: 0; color: var(--critical); font-weight: 600; }
+    .privacy-list.does li::before { content: '✓'; color: var(--good); }
+
+    .share-band { background: var(--surface); border: 1px solid var(--gold); padding: 48px 44px; max-width: 900px; }
+    .share-band h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 16px; }
+    .share-band p { color: var(--muted); margin-bottom: 14px; line-height: 1.75; }
+    .share-band p:last-child { margin-bottom: 0; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--gold); }
+    .footer-links { margin-bottom: 16px; }
+    .footer-links a { margin: 0 10px; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 130px 24px 60px; }
+      .nav-links { display: none; }
+      .platform { padding: 28px 24px; }
+      .privacy-block, .share-band { padding: 30px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Nome House <span>Studios</span></div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/royalties">Royalties</a>
+    <a href="/analytics">Analytics</a>
+  </div>
+  <a href="https://app.nomehousestudios.org" class="nav-cta">Open the App</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">DMJ Sync Analytics</div>
+  <h1 class="hero-headline">
+    Your manager asked for your numbers.<br/>
+    <em>Send a link, not forty screenshots.</em>
+  </h1>
+  <p class="hero-sub">
+    DMJ Sync Analytics lets independent musicians export their own Instagram, TikTok, and YouTube performance data as a spreadsheet or a one-page PDF — and share it with a manager, record label, or brand partner through a read-only link that needs no account on their end.
+  </p>
+  <div class="hero-actions">
+    <a href="https://app.nomehousestudios.org" class="btn-primary">Open the App</a>
+    <a href="#how" class="btn-ghost">How It Works ↓</a>
+  </div>
+</section>
+
+<section class="section dark-section" id="how">
+  <div class="container">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Connect once. Export whenever you need to.</h2>
+    <p class="section-body">There is no setup, no spreadsheet template, and nothing to install. Artists connect the platforms they actually use and export on their own schedule.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Connect Your Accounts</h3>
+        <p>Log in to Instagram, TikTok, or YouTube on each platform's own site and approve read-only access. You are shown exactly what is being requested and can decline. Your password is never seen by the app, and you can disconnect at any time.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Export Your Data</h3>
+        <p>Choose a date range or export everything. The app pulls your own posts and their performance figures and produces a separate CSV per platform, plus a one-page PDF summary if you want something forwardable by email.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Share It</h3>
+        <p>Create a read-only link, choose which platforms it includes and when it expires, and send it. The recipient sees a summary and can download the files without creating an account. Revoke the link any time and it stops working immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">What Gets Exported</div>
+    <h2 class="section-title">Your own content, and how it actually performed.</h2>
+    <p class="section-body">One row per post or video, with the metrics managers, labels, and brand partners actually ask for. Every platform stays in its own separate file.</p>
+
+    <div class="platform-grid">
+      <div class="platform">
+        <h3>Instagram</h3>
+        <ul>
+          <li>Post ID, date, media type, placement</li>
+          <li>Caption and permalink</li>
+          <li>Likes and comments</li>
+          <li>Reach and saves</li>
+          <li>Shares and views</li>
+          <li>Total interactions</li>
+        </ul>
+      </div>
+      <div class="platform">
+        <h3>TikTok</h3>
+        <ul>
+          <li>Video ID, date, duration</li>
+          <li>Title and URL</li>
+          <li>Views</li>
+          <li>Likes and comments</li>
+          <li>Shares</li>
+        </ul>
+      </div>
+      <div class="platform">
+        <h3>YouTube</h3>
+        <ul>
+          <li>Video title, upload date, duration</li>
+          <li>Views and early-window views</li>
+          <li>Watch time and average view duration</li>
+          <li>Subscribers gained per 1,000 views</li>
+          <li>Traffic sources and top territories</li>
+          <li>Full audience retention curve</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section">
+  <div class="container">
+    <div class="section-eyebrow">Privacy</div>
+    <h2 class="section-title">Read-only, your data only.</h2>
+    <p class="section-body">The permissions requested are narrower than people usually assume, and it is worth being specific about the limits rather than vague about the protections.</p>
+
+    <div class="privacy-block">
+      <h3>What the app never does</h3>
+      <ul class="privacy-list">
+        <li>Never reads your direct messages on any platform</li>
+        <li>Never collects your follower or following lists</li>
+        <li>Never accesses data belonging to anyone but you</li>
+        <li>Never posts, comments, messages, or edits anything</li>
+        <li>Never sees your social media password — you log in on each platform's own site</li>
+        <li>Never sells your data, uses it for advertising, or uses it to train machine learning models</li>
+      </ul>
+
+      <h3 style="margin-top: 28px;">What it does</h3>
+      <ul class="privacy-list does">
+        <li>Reads your own posts and their performance metrics, read-only</li>
+        <li>Stores exports so you can download and share them later</li>
+        <li>Deletes everything when you disconnect a platform or delete your account</li>
+      </ul>
+
+      <p style="margin-top: 24px; font-size: 0.88rem; color: var(--muted);">
+        Full detail in our <a href="/privacy">Privacy Policy</a>. To remove your data, see the <a href="/data-deletion">Data Deletion Instructions</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="share-band">
+      <h3>Built because the alternative was screenshots</h3>
+      <p>Independent artists get asked for their performance numbers constantly — by managers deciding where to push, by labels evaluating a signing, by brands assessing a partnership. The usual answer is a folder of screenshots taken one post at a time, or figures retyped into a spreadsheet by hand.</p>
+      <p>Both are slow, and both are easy to get wrong in a way that costs credibility with exactly the people you least want to look disorganized in front of. This is the version where you send one link.</p>
+      <div class="hero-actions" style="margin-top: 28px;">
+        <a href="https://app.nomehousestudios.org" class="btn-primary">Open the App</a>
+        <a href="mailto:deshawn@nomehousestudios.org?subject=DMJ%20Sync%20Analytics" class="btn-ghost">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a> &middot;
+    <a href="/royalties">Royalty Audits</a> &middot;
+    <a href="/analytics">Analytics</a> &middot;
+    <a href="/privacy">Privacy Policy</a> &middot;
+    <a href="/terms">Terms of Service</a> &middot;
+    <a href="/data-deletion">Data Deletion</a>
+  </div>
+  <p>Nome House Studios &nbsp;|&nbsp; <a href="mailto:deshawn@nomehousestudios.org">deshawn@nomehousestudios.org</a> &nbsp;|&nbsp; &copy; 2026 All rights reserved.</p>
+</footer>
+
+</body>
+</html>

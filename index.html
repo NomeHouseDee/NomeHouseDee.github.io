@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://nomehousestudios.org/" />
+
+  <title>Nome House Studios | Royalty Audits, Sync Licensing & Analytics for Independent Artists</title>
+  <meta name="description" content="Back-office operations for independent artists, managers, and labels. Royalty audits that recover unpaid streaming income, sync licensing representation, and analytics tools for release planning. One artist audit found $1,000+ in unaccounted royalties in a single session." />
+  <meta name="keywords" content="music royalty audit, sync licensing agent, music catalog management, independent artist analytics, release planning, music business operations, indie label services" />
+
+  <meta property="og:title" content="Nome House Studios | Music Business Operations for Independent Artists" />
+  <meta property="og:description" content="Royalty audits, sync licensing, and analytics for independent artists, managers, and labels." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nomehousestudios.org" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nome House Studios",
+    "description": "Music business operations for independent artists, managers, and labels. Services include royalty auditing and recovery, sync licensing representation, catalog management, and analytics tooling for release planning.",
+    "url": "https://nomehousestudios.org",
+    "email": "deshawn@nomehousestudios.org",
+    "areaServed": "Worldwide",
+    "knowsAbout": [
+      "Music royalty auditing",
+      "Sync licensing",
+      "Music catalog management",
+      "Streaming analytics",
+      "PRO and MLC registration",
+      "Release planning"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Royalty Audit", "url": "https://nomehousestudios.org/royalties", "description": "Diagnostic audit across 15+ documented royalty failure modes, with dispute-ready documentation." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sync Licensing Representation", "description": "One-stop, pre-cleared catalog representation for film, television, advertising, and games." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics and Release Planning", "url": "https://nomehousestudios.org/analytics", "description": "Cross-platform performance analytics and reporting tools for artists and their teams." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Catalog Management", "description": "Metadata, registration, and rights administration for independent catalogs." } }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --deep: #111111; --surface: #181818; --border: #2a2a2a;
+      --gold: #c9a84c; --gold-light: #e8c96a; --white: #f2f0eb; --muted: #888884;
+      --critical: #d95c3a;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --max: 1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--serif); font-size: 1.05rem; color: var(--white); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 24px; align-items: center; font-size: 0.875rem; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--black) !important; padding: 10px 22px; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.03em; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    .hero { padding: 170px 24px 90px; max-width: var(--max); margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    .hero-headline { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.12; max-width: 860px; margin-bottom: 28px; }
+    .hero-headline em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 640px; margin-bottom: 44px; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { background: var(--gold); color: var(--black); padding: 16px 36px; font-weight: 600; font-size: 0.95rem; display: inline-block; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--gold-light); color: var(--black); transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid var(--border); color: var(--muted); padding: 16px 36px; font-size: 0.95rem; display: inline-block; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    .section { padding: 90px 24px; }
+    .dark-section { background: var(--deep); }
+    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.7rem); line-height: 1.2; margin-bottom: 20px; max-width: 760px; }
+    .section-body { color: var(--muted); max-width: 640px; margin-bottom: 52px; line-height: 1.75; }
+
+    .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .pillar { background: var(--surface); padding: 40px 36px; display: flex; flex-direction: column; transition: background 0.2s; }
+    .pillar:hover { background: var(--deep); }
+    .pillar-num { font-family: var(--serif); font-size: 0.9rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 18px; }
+    .pillar h3 { font-family: var(--serif); font-size: 1.35rem; margin-bottom: 14px; }
+    .pillar p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1; }
+    .pillar-link { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .pillar-note { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+
+    .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; max-width: 960px; }
+    .who h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 12px; color: var(--gold); }
+    .who p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    .proof-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 24px; background: var(--deep); }
+    .proof-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 44px; }
+    .proof-item { text-align: center; }
+    .proof-number { font-family: var(--serif); font-size: 2.6rem; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .proof-item.featured .proof-number { color: var(--critical); }
+    .proof-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; max-width: 210px; margin: 0 auto; }
+
+    .cta-band { background: var(--surface); border: 1px solid var(--gold); padding: 56px 48px; max-width: 900px; }
+    .cta-band h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px; }
+    .cta-band p { color: var(--muted); margin-bottom: 32px; max-width: 560px; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--gold); }
+    .footer-links { margin-bottom: 16px; }
+    .footer-links a { margin: 0 10px; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 130px 24px 64px; }
+      .nav-links { display: none; }
+      .pillar { padding: 32px 24px; }
+      .cta-band { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Nome House <span>Studios</span></div>
+  <div class="nav-links">
+    <a href="/royalties">Royalties</a>
+    <a href="/analytics">Analytics</a>
+    <a href="#services">Services</a>
+  </div>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Music Business Operations</div>
+  <h1 class="hero-headline">
+    Independent artists lose money in the places<br/>
+    <em>nobody is watching.</em>
+  </h1>
+  <p class="hero-sub">
+    Nome House Studios is the back office for independent artists, managers, and labels — the royalty auditing, sync licensing, catalog management, and analytics work that determines whether a career is sustainable, and that almost nobody at this level has anyone doing.
+  </p>
+  <div class="hero-actions">
+    <a href="#services" class="btn-primary">See What We Do</a>
+    <a href="/royalties" class="btn-ghost">Royalty Audits →</a>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <div class="proof-inner">
+    <div class="proof-item featured">
+      <div class="proof-number">$1,000+</div>
+      <div class="proof-label">Unaccounted royalties found in one artist audit — May 2026</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-number">15+</div>
+      <div class="proof-label">Documented royalty failure points checked in every audit</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-number">3</div>
+      <div class="proof-label">Royalty streams reconciled: master, performance, mechanical</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-number">4</div>
+      <div class="proof-label">Service areas, from rights administration to release analytics</div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Four areas. One operating model.</h2>
+    <p class="section-body">Every one of these exists because a real client needed it and there was no one else doing it at their scale. They work independently — most clients start with one — but they compound when combined.</p>
+
+    <div class="pillars">
+
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>Royalty Audits &amp; Recovery</h3>
+        <p>We cross-reference your streaming data against distributor statements, PRO reports, and collection society registrations to find money that was earned but never paid. Distributor withholding, copyright flags freezing payments, split discrepancies, unregistered mechanicals. You get a findings report and dispute-ready letters.</p>
+        <a class="pillar-link" href="/royalties">Royalty audits →</a>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>Sync Licensing</h3>
+        <p>Representation for film, television, advertising, and games. One-stop, pre-cleared, with documented splits and control percentages per track — so a music supervisor gets a yes in hours, not a week of chasing rights holders. Clearance readiness is the product; the pitch is the easy part.</p>
+        <p class="pillar-note">Currently representing indie rock, indie pop, and producer catalogs.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>Analytics &amp; Release Planning</h3>
+        <p>Cross-platform performance data, pulled and reported so artists can actually use it — and hand it to a manager, label, or brand partner on request instead of screenshotting one post at a time. Includes DMJ Sync Analytics, our reporting tool for Instagram, TikTok, and YouTube.</p>
+        <a class="pillar-link" href="/analytics">Analytics tools →</a>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <h3>Catalog Management</h3>
+        <p>Metadata, ISRC and ISWC linkage, registration across PROs, the MLC, SoundExchange and neighbouring rights societies, and the rights administration that determines whether a catalog is licensable or a liability. Built for labels and managers running multiple artists.</p>
+        <p class="pillar-note">Available as ongoing retainer or one-time cleanup.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section">
+  <div class="container">
+    <div class="section-eyebrow">Who This Is For</div>
+    <h2 class="section-title">Three kinds of people keep hiring us.</h2>
+    <p class="section-body">Different problems, same underlying gap: the operational work that major-label artists have entire departments for, and independent artists have nobody for.</p>
+
+    <div class="who-grid">
+      <div class="who">
+        <h3>Independent Artists</h3>
+        <p>You're releasing consistently and something feels off — the streaming numbers don't match the payments, or a brand asked for your analytics and you didn't have a good answer. You need the back office you can't afford to hire full-time.</p>
+      </div>
+      <div class="who">
+        <h3>Managers</h3>
+        <p>You have a roster on different distributors with different deal structures, and no realistic way to verify any of them are being paid correctly. You need per-artist diagnostics and reporting you can act on and forward.</p>
+      </div>
+      <div class="who">
+        <h3>Independent Labels</h3>
+        <p>You have a catalog, multiple artists, and rights administration that has outgrown a spreadsheet. You need catalog operations, sync readiness, and sometimes purpose-built tooling that doesn't exist off the shelf.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Not sure which of these you need?</h2>
+      <p>Most people start with one specific problem and discover it connects to two others. Tell us what's going on and we'll tell you honestly whether we can help — and if the answer is no, we'll say so.</p>
+      <div class="hero-actions">
+        <a href="mailto:deshawn@nomehousestudios.org?subject=Inquiry" class="btn-primary">Email Us</a>
+        <a href="/royalties#contact" class="btn-ghost">Request a Royalty Audit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="/royalties">Royalty Audits</a> &middot;
+    <a href="/analytics">Analytics</a> &middot;
+    <a href="/privacy">Privacy Policy</a> &middot;
+    <a href="/terms">Terms of Service</a> &middot;
+    <a href="/data-deletion">Data Deletion</a>
+  </div>
+  <p>Nome House Studios &nbsp;|&nbsp; <a href="mailto:deshawn@nomehousestudios.org">deshawn@nomehousestudios.org</a> &nbsp;|&nbsp; &copy; 2026 All rights reserved.</p>
+</footer>
+
+</body>
+</html>

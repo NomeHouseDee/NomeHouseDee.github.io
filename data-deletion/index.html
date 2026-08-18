@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Deletion Instructions — DMJ Sync Analytics | Nome House Studios</title>
+<meta name="description" content="How to delete data that DMJ Sync Analytics holds about you, including full account deletion.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --black: #0a0a0a; --deep: #111111; --surface: #181818; --border: #2a2a2a;
+    --gold: #c9a84c; --gold-light: #e8c96a; --white: #f2f0eb; --muted: #888884;
+    --critical: #d95c3a; --good: #6aab7d;
+    --max-width: 760px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--black); color: var(--white);
+    font-family: var(--sans); font-size: 16px; line-height: 1.75;
+    padding: 0 1.5rem 5rem; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: var(--max-width); margin: 0 auto; }
+  header.page-header {
+    max-width: var(--max-width); margin: 0 auto;
+    padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+  }
+  h1 { font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.2; margin-bottom: 0.6rem; font-weight: 400; }
+  h2 {
+    font-family: var(--serif); font-size: 1.35rem; font-weight: 400;
+    margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
+  h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; margin: 2rem 0 0.6rem; color: var(--gold); }
+  p, ul, ol { margin: 0 0 1.1rem; color: var(--muted); }
+  strong { color: var(--white); font-weight: 600; }
+  ul, ol { padding-left: 1.5rem; }
+  li { margin-bottom: 0.5rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; color: var(--gold); background: var(--surface); padding: 0.1em 0.4em; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.35); }
+  a:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  .lede { font-size: 1.05rem; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin: 1.25rem 0 1.75rem; font-size: 0.92rem; }
+  th, td { padding: 0.7rem 0.85rem; text-align: left; border-bottom: 1px solid var(--border); color: var(--muted); }
+  th { background: var(--surface); color: var(--white); font-weight: 600; }
+  .callout {
+    background: var(--surface); border-left: 3px solid var(--gold);
+    padding: 1.25rem 1.5rem; margin: 1.75rem 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .option {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 1.75rem 2rem; margin: 1.75rem 0;
+  }
+  .option h2 { margin-top: 0; border-top: none; padding-top: 0; }
+  .option > :last-child { margin-bottom: 0; }
+  .option-tag {
+    display: inline-block; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    background: rgba(201,168,76,0.12); color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.25rem 0.7rem; margin-bottom: 0.9rem;
+  }
+  .email-cta {
+    display: inline-block; background: var(--gold); color: var(--black);
+    font-weight: 600; text-decoration: none; border: none;
+    padding: 0.85rem 1.6rem; margin: 0.4rem 0 1.2rem;
+    transition: background 0.2s;
+  }
+  .email-cta:hover { background: var(--gold-light); color: var(--black); border: none; }
+  footer.page-footer {
+    max-width: var(--max-width); margin: 4rem auto 0;
+    padding-top: 2rem; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.88rem; text-align: center;
+  }
+  footer.page-footer a { color: var(--muted); border-bottom: none; margin: 0 0.5rem; }
+  footer.page-footer a:hover { color: var(--gold); }
+  @media (max-width: 480px) {
+    h1 { font-size: 1.65rem; }
+    .option { padding: 1.25rem 1.35rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <p class="eyebrow">Nome House Studios</p>
+  <h1>Data Deletion Instructions</h1>
+  <p class="updated">DMJ Sync Analytics &middot; Last updated: August 17, 2026</p>
+</header>
+
+<main>
+  <p class="lede">This page explains how to delete data that DMJ Sync Analytics (operated by Nome House Studios) holds about you. There are three options depending on how much you want removed.</p>
+
+  <section class="option">
+    <p class="option-tag">Option 1</p>
+    <h2>Delete data from one platform</h2>
+    <p>Use this if you want to disconnect Instagram, TikTok, or YouTube and remove what we&rsquo;ve stored from it, while keeping your account and your other platforms.</p>
+    <ol>
+      <li>Log in to your dashboard.</li>
+      <li>Find the platform&rsquo;s card.</li>
+      <li>Click <strong>Disconnect</strong>.</li>
+    </ol>
+    <p>This immediately deletes our copy of that platform&rsquo;s access token and revokes our ability to fetch anything further. To also remove the exports we&rsquo;ve already stored from that platform, email us using Option 3 below and say which platform.</p>
+  </section>
+
+  <section class="option">
+    <p class="option-tag">Option 2</p>
+    <h2>Remove the app from Instagram</h2>
+    <p>You can revoke access from Instagram&rsquo;s side, without visiting our site at all:</p>
+    <ol>
+      <li>Open Instagram and go to <strong>Settings and privacy</strong>.</li>
+      <li>Go to <strong>Website permissions → Apps and websites</strong>.</li>
+      <li>Find <strong>DMJ Sync Analytics</strong> and select <strong>Remove</strong>.</li>
+    </ol>
+    <p>Instagram will notify us automatically. When we receive that notification we immediately delete the stored Instagram access token and the Instagram data associated with your account, and we generate a confirmation code you can use to verify the deletion took place.</p>
+    <div class="callout">
+      <p><strong>Note:</strong> this removes your Instagram data. It does not affect data from TikTok or YouTube, which Instagram has no relationship to, and it does not delete your DMJ Sync Analytics account. Use Option 3 if you want everything removed.</p>
+    </div>
+  </section>
+
+  <section class="option">
+    <p class="option-tag">Option 3</p>
+    <h2>Delete everything</h2>
+    <p>To delete your entire account and all associated data across every platform, email us:</p>
+    <p>
+      <a class="email-cta" href="mailto:deshawn@nomehousestudios.org?subject=Data%20deletion%20request">Email a deletion request</a>
+    </p>
+    <p>Use the subject line <strong>&ldquo;Data deletion request&rdquo;</strong> and send from the email address associated with your account (this is how we verify the request is genuinely yours).</p>
+    <p>We will:</p>
+    <ul>
+      <li>Confirm receipt <strong>within 3 business days</strong></li>
+      <li>Complete the deletion <strong>within 30 days</strong></li>
+      <li>Email you a confirmation once it&rsquo;s done</li>
+    </ul>
+  </section>
+
+  <h2>What gets deleted</h2>
+  <p>When you request full deletion, we permanently remove:</p>
+  <ul>
+    <li>Your account and login credentials</li>
+    <li>All stored access tokens for every connected platform</li>
+    <li>All exported data (Instagram, TikTok, and YouTube)</li>
+    <li>Any cost data you entered</li>
+    <li>All share links you created (they stop working immediately)</li>
+    <li>Any manager access grants you issued</li>
+    <li>Any webhook address or API tokens you configured</li>
+    <li>Your export history and preferences</li>
+  </ul>
+  <p>This is a hard delete, not a flag &mdash; the rows are removed from our database, not hidden.</p>
+
+  <h2>What we cannot delete</h2>
+  <p>Being straightforward about the limits:</p>
+  <ul>
+    <li><strong>Files you already downloaded.</strong> CSVs and PDFs saved to your own computer, or forwarded to a manager or brand, are outside our control.</li>
+    <li><strong>Data held by Instagram, TikTok, or YouTube.</strong> We only delete our copy. To delete data on those platforms, use their own tools.</li>
+    <li><strong>Encrypted backups</strong>, which are retained for up to 30 days on a rolling schedule before being overwritten. Your data is not accessible or restorable to the live service during that window.</li>
+  </ul>
+
+  <h2>Checking the status of an automatic deletion</h2>
+  <p>If your deletion was triggered by removing the app from Instagram (Option 2), we generate a confirmation code and a status page URL. If you have that code, you can open the status page to confirm the deletion completed and when.</p>
+
+  <h2>Questions</h2>
+  <p>
+    <strong>Nome House Studios</strong><br>
+    <a href="mailto:deshawn@nomehousestudios.org">deshawn@nomehousestudios.org</a>
+  </p>
+  <p>See also our <a href="/privacy">Privacy Policy</a>.</p>
+</main>
+
+<footer class="page-footer">
+  <p>
+    <a href="/">Home</a> &middot;
+    <a href="/royalties">Royalty Audits</a> &middot;
+    <a href="/analytics">Analytics</a> &middot;
+    <a href="/privacy">Privacy</a> &middot;
+    <a href="/terms">Terms</a> &middot;
+    <a href="/data-deletion">Data Deletion</a>
+  </p>
+  <p style="margin-top:0.75rem">&copy; 2026 Nome House Studios</p>
+</footer>
+
+</body>
+</html>
